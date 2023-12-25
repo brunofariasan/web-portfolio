@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { FlexProps } from "./types";
-import { FlexBoxContainer } from "./styles";
+import { FlexContainer } from "./styles";
 
 const Flex: FC<FlexProps> = ({
   direction,
@@ -15,7 +15,7 @@ const Flex: FC<FlexProps> = ({
   ...rest
 }) => {
   return (
-    <FlexBoxContainer
+    <FlexContainer
       direction={direction}
       justify={justify}
       align={align}
@@ -27,7 +27,7 @@ const Flex: FC<FlexProps> = ({
       {...rest}
     >
       {children}
-    </FlexBoxContainer>
+    </FlexContainer>
   );
 };
 

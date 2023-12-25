@@ -15,6 +15,7 @@ export interface StyledFlexProps {
   justify?: string;
   align?: string;
   wrap?: string;
+  gap?: string;
   flexDirection?: string;
   height?: string;
   width?: string;

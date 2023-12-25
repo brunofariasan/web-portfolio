@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { StyledFlexProps } from "./types";
 
-export const FlexBoxContainer = styled.div<StyledFlexProps>`
+export const FlexContainer = styled.div<StyledFlexProps>`
   display: flex;
   flex-direction: ${(props) => props.direction || "row"};
   justify-content: ${(props) => props.justify || "flex-start"};
