@@ -1,7 +1,4 @@
-// src/components/FlexBox/FlexBox.tsx
-
 import React, { FC } from "react";
-
 import { FlexProps } from "./types";
 import { FlexBoxContainer } from "./styles";
 

@@ -1,5 +1,3 @@
-// src/components/FlexBox/FlexBoxStyles.ts
-
 import styled from "styled-components";
 import { StyledFlexProps } from "./types";
 
