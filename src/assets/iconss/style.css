@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?15lrm2');
+  src:  url('fonts/icomoon.eot?15lrm2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?15lrm2') format('truetype'),
+    url('fonts/icomoon.woff?15lrm2') format('woff'),
+    url('fonts/icomoon.svg?15lrm2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-up:before {
+  content: "\e922";
+}
+.icon-play:before {
+  content: "\e921";
+}
+.icon-android-apple:before {
+  content: "\e900";
+}
+.icon-chart-tool:before {
+  content: "\e901";
+}
+.icon-clock:before {
+  content: "\e902";
+}
+.icon-cloud-security:before {
+  content: "\e903";
+}
+.icon-cloud-server:before {
+  content: "\e904";
+}
+.icon-connectivity:before {
+  content: "\e905";
+}
+.icon-connectivity-one:before {
+  content: "\e906";
+}
+.icon-graphic:before {
+  content: "\e907";
+}
+.icon-hardware:before {
+  content: "\e908";
+}
+.icon-phone:before {
+  content: "\e909";
+}
+.icon-search-one:before {
+  content: "\e90a";
+}
+.icon-search-tool:before {
+  content: "\e90b";
+}
+.icon-security:before {
+  content: "\e90c";
+}
+.icon-shopping:before {
+  content: "\e90d";
+}
+.icon-tablet-tool:before {
+  content: "\e90e";
+}
+.icon-tool:before {
+  content: "\e90f";
+}
+.icon-tool-cloud:before {
+  content: "\e910";
+}
+.icon-tool-icon:before {
+  content: "\e911";
+}
+.icon-tools:before {
+  content: "\e912";
+}
+.icon-user:before {
+  content: "\e913";
+}
+.icon-user-one:before {
+  content: "\e914";
+}
+.icon-arrow:before {
+  content: "\e915";
+}
+.icon-close:before {
+  content: "\e916";
+}
+.icon-colapsar:before {
+  content: "\e917";
+}
+.icon-colapsar-filled:before {
+  content: "\e918";
+}
+.icon-facebook:before {
+  content: "\e919";
+}
+.icon-instagram:before {
+  content: "\e91a";
+}
+.icon-linkedin:before {
+  content: "\e91b";
+}
+.icon-menu:before {
+  content: "\e91c";
+}
+.icon-search:before {
+  content: "\e91d";
+}
+.icon-share:before {
+  content: "\e91e";
+}
+.icon-twitter:before {
+  content: "\e91f";
+}
+.icon-youtube:before {
+  content: "\e920";
+}
