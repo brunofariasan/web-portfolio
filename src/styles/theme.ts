@@ -9,6 +9,12 @@ export const theme = {
     deepForestGreen: "#28403D",
     darkCharcoal: "#182625",
   },
+  breakpoints: {
+    sm: "414px",
+    md: "744px",
+    lg: "1366px",
+    hd: "1920px",
+  },
   font: {
     family: {
       primary: "Mulish, sans-serif",
@@ -26,7 +32,7 @@ export const theme = {
       huge: "3.8rem",
       xhuge: "4rem",
       xxhuge: "4.8rem",
-      xxxhuge: "5.6rem",
+      xxxhuge: "6rem",
     },
     weight: {
       light: 300,
