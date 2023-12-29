@@ -5,8 +5,10 @@ export interface FlexProps {
   wrap?: string;
   flexDirection?: string;
   gap?: string;
+  textAlign?: string;
   height?: string;
   width?: string;
+  maxWidth?: string;
   children: React.ReactNode;
 }
 
@@ -15,8 +17,10 @@ export interface StyledFlexProps {
   justify?: string;
   align?: string;
   wrap?: string;
-  gap?: string;
   flexDirection?: string;
+  textAlign?: string;
+  gap?: string;
   height?: string;
   width?: string;
+  maxWidth?: string;
 }
