@@ -8,9 +8,11 @@ const Flex: FC<FlexProps> = ({
   align,
   wrap,
   flexDirection,
+  textAlign,
   gap,
   height,
   width,
+  maxWidth,
   children,
   ...rest
 }) => {
@@ -21,9 +23,11 @@ const Flex: FC<FlexProps> = ({
       align={align}
       wrap={wrap}
       flexDirection={flexDirection}
+      textAlign={textAlign}
       gap={gap}
       height={height}
       width={width}
+      maxWidth={maxWidth}
       {...rest}
     >
       {children}

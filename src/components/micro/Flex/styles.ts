@@ -8,7 +8,9 @@ export const FlexContainer = styled.div<StyledFlexProps>`
   align-items: ${(props) => props.align || "stretch"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   flex-direction: ${(props) => props.flexDirection};
+  text-align: ${(props) => props.textAlign};
   gap: ${(props) => props.gap};
   height: ${(props) => props.height || "auto"};
-  width: ${(props) => props.width || "auto"};
+  width: ${(props) => props.width};
+  max-width: ${(props) => props.maxWidth};
 `;
