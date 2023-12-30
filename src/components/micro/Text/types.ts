@@ -6,12 +6,12 @@ type TextVariants =
   | "title-banner-sub" //sub titulo do banner
   | "text-icon" //texto abaixo dos icones
   | "text-description-left" //texto do lado esquerda da seção verde
-  | "text-description-right"; //texto do lado direito da seção verde
+  | "text-description-right" //texto do lado direito da seção verde
+  | "title-footer" //titulo interno do footer
+  | "text-footer" //text interno do footer
 // | "title-logo" //nome logo(Bruno Faria)
 // | "title-section-description" //texto pequeno encima do titulo da seção
 // | "title-section-slider" //titulo grande da seção de slider
-// | "title-footer" //titulo interno do footer
-// | "text-footer" //text interno do footer
 // | "text-menu" //text MENU
 // | "text-close" //text CLOSE
 // | "text-name-menu" //texto do menu

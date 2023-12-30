@@ -2,32 +2,57 @@ import styled, { css } from "styled-components";
 import { theme } from "@/styles/theme";
 
 export const Container = styled.div`
-  min-height: 800px;
-  background-color: ${theme.colors.deepSlateBlue};
+  min-height: 430px;
+  background-color: ${theme.colors.darkCharcoal};
+  padding-left: clamp(0.1rem, 1.8rem + 2.9vw, 34.2rem);
+  padding-right: clamp(0.1rem, 1.8rem + 2.9vw, 34.2rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
 `;
 
-export const CardSection = styled.div`
-  padding: 228.64px 0 102.7px;
+export const TitleSection = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 90px 0 0px;
 
   @media (max-width: 1200px) {
-    padding: 135.64px 0 102.7px;
     padding-left: clamp(0.1rem, 0.8rem + 8.9vw, 36.2rem);
     padding-right: clamp(0.1rem, 0.8rem + 8.9vw, 36.2rem);
+  }
+  @media (max-width: 1032px) {
+    flex-wrap: wrap;
+  }
+  @media (max-width: 600px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+`;
+
+export const FlexTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 311px;
+  gap: 20px;
+
+  @media (max-width: 520px) {
+    max-width: 100%;
   }
 `;
 
 export const TextSection = styled.div`
-  padding-left: clamp(0.1rem, 3.8rem + 1.9vw, 36.2rem);
-  padding-right: clamp(0.1rem, 3.8rem + 1.9vw, 36.2rem);
+  padding-left: clamp(0.1rem, 1.8rem + 15.9vw, 36.2rem);
+  padding-right: clamp(0.1rem, 1.8rem + 15.9vw, 36.2rem);
   display: flex;
-  gap: 3.5rem;
+  gap: 35px;
   justify-content: center;
 
-  @media (max-width: 912px) {
+  @media (max-width: ${theme.breakpoints.lg}) {
     flex-direction: column;
-    padding-bottom: 8rem;
+    padding-bottom: clamp(0.1rem, 1.8rem + 15.9vw, 36.2rem);
   }
 `;
 
@@ -42,9 +67,10 @@ export const FlexEnd = styled.div`
 `;
 
 export const Text = styled.div`
-  max-width: 70rem;
+  max-width: 700px;
 
   @media (max-width: ${theme.breakpoints.lg}) {
+    text-align: center;
     max-width: 100%;
   }
 `;
@@ -52,12 +78,9 @@ export const Text = styled.div`
 export const FlexContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 3.5rem;
-  width: 80%;
+  justify-content: space-between;
+  gap: 35px;
 
-  @media (max-width: 1380px) {
-  }
   @media (max-width: 900px) {
     div {
       flex: 1 0 calc(50% - 12.5px);
@@ -75,5 +98,5 @@ export const FlexItem = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 10px;
 `;

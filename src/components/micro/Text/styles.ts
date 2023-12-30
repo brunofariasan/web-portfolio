@@ -4,7 +4,6 @@ import { TextProps } from "./types";
 const textVariants = {
   "title-banner": css`
     color: ${({ theme }) => theme.colors.white};
-    //font-family: "Zen Dots", sans-serif;
     font-size: clamp(0.1rem, 2.8rem + 2.9vw, 6rem);
     letter-spacing: 0.5rem;
     line-height: clamp(0.1rem, 3.8rem + 2.9vw, 6.2rem);
@@ -30,16 +29,21 @@ const textVariants = {
     line-height: 2.5rem;
     letter-spacing: 0.11rem;
     user-select: none;
-    //padding: 0 1.5rem 0 1.5rem;
     font-family: "Inter", sans-serif;
   `,
   "text-description-left": css`
     color: ${({ theme }) => theme.colors.white};
     font-family: Montserrat;
-    //letter-spacing: -1px;
     font-size: 3.8rem;
     line-height: 4.2rem;
     font-weight: 800;
+    max-width: 550px;
+    text-align: right;
+
+    @media (max-width: 912px) {
+      max-width: 100%;
+      text-align: center;
+    }
   `,
 
   "text-description-right": css`
@@ -49,9 +53,47 @@ const textVariants = {
     font-weight: 400;
     line-height: 2.3rem;
     letter-spacing: 0.11rem;
-    //padding: 0 1.5rem 0 1.5rem;
     font-family: "Inter", sans-serif;
     height: auto;
+    max-width: 650px;
+
+    @media (max-width: 912px) {
+      max-width: 100%;
+      text-align: center;
+    }
+  `,
+
+  "title-footer": css`
+    color: ${({ theme }) => theme.colors.white};
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 2.5rem;
+    letter-spacing: 0.15rem;
+    font-family: "Montserrat", sans-serif;
+    max-width: 20.5rem;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+    }
+  `,
+
+  "text-footer": css`
+    color: ${({ theme }) => theme.colors.white};
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.9rem;
+    letter-spacing: 0.11rem;
+    font-family: "Montserrat", sans-serif;
+    max-width: 311px;
+
+    @media (max-width: 718px) {
+      max-width: 100%;
+    }
   `,
 };
 
