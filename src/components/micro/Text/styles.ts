@@ -95,6 +95,56 @@ const textVariants = {
       max-width: 100%;
     }
   `,
+
+  "section-watermark": css`
+    color: rgba(0, 0, 0, 0.04);
+    font-size: clamp(0.1rem, 2.8rem + 2.9vw, 9.6rem);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.9rem;
+    font-family: "Montserrat";
+    text-align: end;
+    max-height: 111px;
+    line-height: 81px;
+  `,
+
+  "title-logo": css`
+    font-family: "Inter";
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.5rem;
+    letter-spacing: 0.2rem;
+  `,
+
+  "main-text-about-me": css`
+    font-family: "Montserrat";
+    font-size: clamp(0.1rem, 1.8rem + 2.9vw, 4.8rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: clamp(0.1rem, 1.8rem + 2.9vw, 5rem);
+    letter-spacing: 0.6rem;
+    max-width: 50rem;
+  `,
+
+  "final-text-about-me": css`
+    font-family: "Inter";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.36rem;
+    max-width: 76.2rem;
+  `,
+
+  "card-description": css`
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: 0.2px;
+    max-width: 41rem;
+  `,
 };
 
 export const TextContainer = styled.span.attrs<TextProps>(({ component }) => ({

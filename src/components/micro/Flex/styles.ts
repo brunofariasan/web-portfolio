@@ -13,4 +13,9 @@ export const FlexContainer = styled.div<StyledFlexProps>`
   height: ${(props) => props.height || "auto"};
   width: ${(props) => props.width};
   max-width: ${(props) => props.maxWidth};
+  padding: ${(props) => props.p};
+  padding-left: ${(props) => props.pl};
+  padding-bottom: ${(props) => props.pb};
+  padding-right: ${(props) => props.pr};
+  padding-top: ${(props) => props.pt};
 `;

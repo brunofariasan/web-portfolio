@@ -9,7 +9,12 @@ type TextVariants =
   | "text-description-right" //texto do lado direito da seção verde
   | "title-footer" //titulo interno do footer
   | "text-footer" //text interno do footer
-// | "title-logo" //nome logo(Bruno Faria)
+  | "section-watermark" // texto marca d'agua da seção
+  | "title-logo" //nome logo(Bruno Faria)
+  | "main-text-about-me" // texto peincipal sobre mim
+  | "final-text-about-me" // texto final sobre mim
+  | "card-description" // texto de card
+  // | "text-partner"; // texto de parceiro
 // | "title-section-description" //texto pequeno encima do titulo da seção
 // | "title-section-slider" //titulo grande da seção de slider
 // | "text-menu" //text MENU
@@ -19,12 +24,7 @@ type TextVariants =
 // | "text-over-title" // texto sobre o titulo da seção
 // | "text-data" // texto da data
 // | "text-new" // texto novo
-// | "card-description" // texto de card
-// | "text-partner" // texto de parceiro
-// | "section-watermark" // texto marca d'agua da seção
 // | "small-text-about-me" // texto inical sobre mim
-// | "main-text-about-me" // texto peincipal sobre mim
-// | "final-text-about-me" // texto final sobre mim
 // | "project-quantity";
 
 type TextComponent =

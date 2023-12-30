@@ -13,6 +13,11 @@ const Flex: FC<FlexProps> = ({
   height,
   width,
   maxWidth,
+  p,
+  pl,
+  pb,
+  pr,
+  pt,
   children,
   ...rest
 }) => {
@@ -28,6 +33,11 @@ const Flex: FC<FlexProps> = ({
       height={height}
       width={width}
       maxWidth={maxWidth}
+      p={p}
+      pl={pl}
+      pb={pb}
+      pr={pr}
+      pt={pt}
       {...rest}
     >
       {children}
