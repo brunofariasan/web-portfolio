@@ -1,6 +1,6 @@
 import * as S from "./styles";
 import Text from "@/components/micro/Text";
-import imge from "../../assets/thumbnail-1.png";
+import imge from "../../assets/images/thumbnail-1.png";
 import Flex from "../micro/Flex";
 import { TEXT } from "./constants";
 
