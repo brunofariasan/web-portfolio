@@ -20,7 +20,7 @@ export const mockItems = [
   {
     date: "2022",
     new: null,
-    description: "Desenvolvimento da seção de carrinho e checkuta",
+    description: "Desenvolvimento da seção de carrinho e checkout",
     logo: LogoEdge,
   },
   {
