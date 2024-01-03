@@ -14,7 +14,15 @@ type TextVariants =
   | "main-text-about-me" // texto peincipal sobre mim
   | "final-text-about-me" // texto final sobre mim
   | "card-description" // texto de card
-  // | "text-partner"; // texto de parceiro
+  | "small-text-about-me" // texto inical sobre mim
+  | "medium-text-about-me" // segundo texto inicial da seção sobre mim
+  | "end-text-about-me" // segundo texto inicial da seção sobre mim
+  | "text-main-technologies"
+  | "project-quantity"
+  | "project-title"
+  | "project-text"
+
+// | "text-partner"; // texto de parceiro
 // | "title-section-description" //texto pequeno encima do titulo da seção
 // | "title-section-slider" //titulo grande da seção de slider
 // | "text-menu" //text MENU
@@ -24,8 +32,6 @@ type TextVariants =
 // | "text-over-title" // texto sobre o titulo da seção
 // | "text-data" // texto da data
 // | "text-new" // texto novo
-// | "small-text-about-me" // texto inical sobre mim
-// | "project-quantity";
 
 type TextComponent =
   | "span"

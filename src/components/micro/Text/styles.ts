@@ -145,6 +145,82 @@ const textVariants = {
     letter-spacing: 0.2px;
     max-width: 41rem;
   `,
+
+  "small-text-about-me": css`
+    font-family: Montserrat;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.5rem;
+    letter-spacing: 2.34px;
+  `,
+
+  "medium-text-about-me": css`
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: 2.4px;
+    max-width: 87.8rem;
+  `,
+
+  "end-text-about-me": css`
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7rem;
+    letter-spacing: 2.88px;
+    max-width: 80rem;
+  `,
+
+  "text-main-technologies": css`
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.4rem;
+    letter-spacing: 4.32px;
+    max-width: 45.8rem;
+
+    @media (max-width: 50rem) {
+      max-width: 100%;
+      text-align: center;
+    }
+  `,
+
+  "project-quantity": css`
+    font-family: Montserrat;
+    font-size: 10.1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 1.1rem;
+    min-width: clamp(0.1rem, 1.8rem + 45.9vw, 65rem);;
+    text-align: center;
+  `,
+
+  "project-title": css`
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: 0.2rem;
+  `,
+
+  "project-text": css`
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7rem;
+    letter-spacing: 2.88px;
+    max-width: 110.0rem;
+  `,
 };
 
 export const TextContainer = styled.span.attrs<TextProps>(({ component }) => ({
