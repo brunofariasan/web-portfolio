@@ -21,6 +21,11 @@ type TextVariants =
   | "project-quantity"
   | "project-title"
   | "project-text"
+  | "title-on-top-of-map"
+  |"title-section-contact"
+  | "contact-section-title-description"
+  | "description-contact"
+  | "section-watermark-white" // texto marca d'agua da seção
 
 // | "text-partner"; // texto de parceiro
 // | "title-section-description" //texto pequeno encima do titulo da seção
