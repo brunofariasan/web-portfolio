@@ -1,6 +1,8 @@
 import AboutMe from "@/components/AboutMe";
 import Banner from "@/components/Banner";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { Map } from "@/components/Map";
 import SelectedProjects from "@/components/SelectedProjects";
 import Skills from "@/components/Skills";
 import Summary from "@/components/Summary";
@@ -16,6 +18,8 @@ export const Home: React.FC = ({}) => {
       <AboutMe />
       <Skills />
       <SelectedProjects />
+      <Map />
+      <Contact />
       <Footer />
     </>
   );

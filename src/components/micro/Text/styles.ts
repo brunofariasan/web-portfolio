@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { TextProps } from "./types";
+import { theme } from "@/styles/theme";
 
 const textVariants = {
   "title-banner": css`
@@ -37,7 +38,7 @@ const textVariants = {
     font-size: 3.8rem;
     line-height: 4.2rem;
     font-weight: 800;
-    max-width: 550px;
+    max-width: 55rem;
     text-align: right;
 
     @media (max-width: 912px) {
@@ -55,7 +56,7 @@ const textVariants = {
     letter-spacing: 0.11rem;
     font-family: "Inter", sans-serif;
     height: auto;
-    max-width: 650px;
+    max-width: 65rem;
 
     @media (max-width: 912px) {
       max-width: 100%;
@@ -89,7 +90,7 @@ const textVariants = {
     line-height: 1.9rem;
     letter-spacing: 0.11rem;
     font-family: "Montserrat", sans-serif;
-    max-width: 311px;
+    max-width: 31.1rem;
 
     @media (max-width: 718px) {
       max-width: 100%;
@@ -104,8 +105,18 @@ const textVariants = {
     letter-spacing: 0.9rem;
     font-family: "Montserrat";
     text-align: end;
-    max-height: 111px;
-    line-height: 81px;
+    max-height: 11.1rem;
+    line-height: 8.1rem;
+  `,
+
+  "section-watermark-white": css`
+    color: rgba(255, 255, 255, 0.04);
+    font-family: "Montserrat";
+    font-size: 9.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 7rem; /* 26.042% */
+    letter-spacing: 9.6px;
   `,
 
   "title-logo": css`
@@ -199,7 +210,7 @@ const textVariants = {
     font-weight: 700;
     line-height: 100%;
     letter-spacing: 1.1rem;
-    min-width: clamp(0.1rem, 1.8rem + 45.9vw, 65rem);;
+    min-width: clamp(0.1rem, 1.8rem + 45.9vw, 65rem);
     text-align: center;
   `,
 
@@ -219,7 +230,54 @@ const textVariants = {
     font-weight: 400;
     line-height: 1.7rem;
     letter-spacing: 2.88px;
-    max-width: 110.0rem;
+    max-width: 110rem;
+  `,
+
+  "title-on-top-of-map": css`
+    font-family: Montserrat;
+    font-size: 7.5rem;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 2.88px;
+    color: #cfd0d2;
+  `,
+
+  "title-section-contact": css`
+    color: ${theme.colors.white};
+    font-family: Montserrat;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4.5rem;
+    letter-spacing: 4px;
+    max-width: 250px;
+
+    @media (max-width: 880px) {
+      max-width: 100%;
+    }
+  `,
+
+  "contact-section-title-description": css`
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.5rem;
+    letter-spacing: 2.34px;
+  `,
+
+  "description-contact": css`
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5rem;
+    letter-spacing: 2.34px;
+    max-width: 60rem;
+    display: flex;
+    align-self: auto;
   `,
 };
 
