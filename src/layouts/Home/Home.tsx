@@ -1,27 +1,21 @@
-import AboutMe from "@/components/AboutMe";
+import React from "react";
 import Banner from "@/components/Banner";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Map } from "@/components/Map";
-import SelectedProjects from "@/components/SelectedProjects";
-import Skills from "@/components/Skills";
 import Summary from "@/components/Summary";
-import SummaryAbout from "@/components/SummaryAbout";
-import React from "react";
+import Head from "next/head";
 
 export const Home: React.FC = ({}) => {
   return (
     <>
-    <Header />
+      <Head>
+        <title>Bruno Faria</title>
+      </Head>
+      <Header />
       <Banner />
       <Summary />
-      <SummaryAbout />
-      <AboutMe />
-      <Skills />
-      <SelectedProjects />
       <Map />
-      <Contact />
       <Footer />
     </>
   );

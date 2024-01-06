@@ -288,6 +288,14 @@ const textVariants = {
     font-style: normal;
     font-weight: 900;
     letter-spacing: 2.4px;
+
+    color: #878a8f;
+    transition: background-color 0.3s ease;
+
+    /* efeito de hover */
+    &:hover {
+      color: #f2f2f2;
+    }
   `,
 
   "text-menu": css`

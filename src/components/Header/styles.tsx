@@ -56,3 +56,7 @@ export const CloseButton = styled.button`
   align-items: center;
   gap: 1rem;
 `;
+
+export const Div = styled.div`
+
+`;
