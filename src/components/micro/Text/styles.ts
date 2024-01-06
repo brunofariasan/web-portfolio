@@ -250,7 +250,7 @@ const textVariants = {
     font-weight: 700;
     line-height: 4.5rem;
     letter-spacing: 4px;
-    max-width: 250px;
+    max-width: 25rem;
 
     @media (max-width: 880px) {
       max-width: 100%;
@@ -258,9 +258,9 @@ const textVariants = {
   `,
 
   "contact-section-title-description": css`
-    color: #fff;
+    color: ${theme.colors.white};
     font-family: Montserrat;
-    font-size: 13px;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 400;
     line-height: 2.5rem;
@@ -268,7 +268,7 @@ const textVariants = {
   `,
 
   "description-contact": css`
-    color: #fff;
+    color: ${theme.colors.white};
     font-family: Montserrat;
     font-size: 1.3rem;
     font-style: normal;
@@ -278,6 +278,59 @@ const textVariants = {
     max-width: 60rem;
     display: flex;
     align-self: auto;
+  `,
+
+  "text-name-menu": css`
+    color: ${theme.colors.white};
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 3.4rem;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 2.4px;
+  `,
+
+  "text-menu": css`
+    color: #cecece;
+    font-family: Montserrat;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.5rem;
+    letter-spacing: 1.3px;
+  `,
+
+  "bruno-faria-log": css`
+    color: ${theme.colors.white};
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.5rem;
+    letter-spacing: 1.5px;
+  `,
+
+  "text-menu-logo": css`
+    color: ${theme.colors.white};
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: 1.1px;
+  `,
+
+  "text-language": css`
+    color: ${theme.colors.white};
+    text-align: center;
+    font-family: Zen Dots;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.5rem;
+    letter-spacing: 2px;
   `,
 };
 

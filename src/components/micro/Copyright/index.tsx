@@ -4,7 +4,7 @@ import React from "react";
 const Copyright = ({ text, color }: any) => {
   return (
     <S.CopyrightWrapper color={color}>
-      {text || `© 2021 - ${new Date().getFullYear()} Bruno Faria.`}
+      {text || `© 2022 - ${new Date().getFullYear()} Bruno Faria.`}
     </S.CopyrightWrapper>
   );
 };
