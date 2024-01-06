@@ -7,6 +7,7 @@ import { Line } from "../micro/Line";
 import { theme } from "@/styles/theme";
 import Copyright from "../micro/Copyright";
 import useWindowSize from "@/hooks/useWindowSize";
+import Link from "next/link";
 
 export default function Footer() {
   const { width } = useWindowSize();
@@ -25,14 +26,9 @@ export default function Footer() {
           <Text variant="title-footer">Latest {br} projects —</Text>
           <Flex gap="6px" flexDirection="column">
             {mockItems.map((item, index) => (
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={index}
-              >
-                <Text variant="text-footer">{item.name}</Text>
-              </a>
+              <Link href={item.url} key={index}>
+              <Text variant="text-footer">{item.name}</Text>
+            </Link>
             ))}
           </Flex>
         </Flex>
@@ -41,17 +37,12 @@ export default function Footer() {
           <Text variant="text-footer">{TEXT.SKILLS}</Text>
         </Flex>
         <Flex flexDirection="column" gap="20px">
-          <Text variant="title-footer">Follow {br} me on —</Text>
+          <Text variant="title-footer">Follow {br} me on — </Text>
           <Flex gap="6px" flexDirection="column">
             {mockRedes.map((item, index) => (
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={index}
-              >
+              <Link href={item.url} key={index}>
                 <Text variant="text-footer">{item.name}</Text>
-              </a>
+              </Link>
             ))}
           </Flex>
         </Flex>

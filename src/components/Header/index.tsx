@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { HeaderWrapper, MenuIcon, Menu, CloseButton } from "./styles";
+import { HeaderWrapper, MenuIcon, Menu, CloseButton, Div } from "./styles";
 import Text from "../micro/Text";
 import Flex from "../micro/Flex";
 import Copyright from "../micro/Copyright";
 import Icon from "../micro/Icon";
+import Link from "next/link";
+import { mockItems } from "./mockData";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const Header: React.FC = () => {
+  const { width } = useWindowSize();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -32,13 +36,19 @@ const Header: React.FC = () => {
   return (
     <>
       <HeaderWrapper scrolled={scrolled}>
-        <Text variant="bruno-faria-log">Bruno Faria</Text>
+        <Link href="/">
+          <Text variant="bruno-faria-log">Bruno Faria</Text>
+        </Link>
         <MenuIcon
           onClick={() => setMenuOpen(!menuOpen)}
           className={menuOpen ? "active" : ""}
         >
           {/* <Text variant="text-menu-logo">MENU</Text> */}
-          <Icon iconName="icon-menu" size="big" color="light10" />
+          <Icon
+            iconName="icon-menu"
+            size={width < 700 ? "large" : "big"}
+            color="light10"
+          />
           <Text variant="text-language">en</Text>
         </MenuIcon>
       </HeaderWrapper>
@@ -52,16 +62,19 @@ const Header: React.FC = () => {
         <Flex
           height="85vh"
           justify="center"
-          p="5rem"
           pb="10rem"
           pt="10rem"
           flexDirection="column"
           align="center"
         >
           <Text variant="text-menu">MENU</Text>
-          <Text variant="text-name-menu">Teste1</Text>
-          <Text variant="text-name-menu">Teste2</Text>
-          <Text variant="text-name-menu">Teste3</Text>
+          <Div onClick={() => setMenuOpen(false)}>
+            {mockItems.map((item, index) => (
+              <Link href={item.url} key={index}>
+                <Text variant="text-name-menu">{item.name}</Text>
+              </Link>
+            ))}
+          </Div>
         </Flex>
         <Copyright />
       </Menu>

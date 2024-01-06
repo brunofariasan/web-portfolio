@@ -9,6 +9,7 @@ export const theme = {
     deepForestGreen: "#28403D",
     darkCharcoal: "#182625",
     gray: "#d9d9d9",
+    black: "#000",
   },
   breakpoints: {
     sm: "414px",
