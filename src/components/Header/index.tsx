@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HeaderWrapper, MenuIcon, Menu, CloseButton, Div } from "./styles";
+import * as S from "./styles";
 import Text from "../micro/Text";
 import Flex from "../micro/Flex";
 import Copyright from "../micro/Copyright";
@@ -8,9 +8,11 @@ import Link from "next/link";
 import { mockItems } from "./mockData";
 import useWindowSize from "@/hooks/useWindowSize";
 import { HeaderProps } from "./types";
+import { useRouter } from "next/router";
 
 const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
-  
+  const router = useRouter();
+  const currentPath = router.asPath;
   const { width } = useWindowSize();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,10 +36,10 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
       document.body.style.overflow = "auto";
     }
   }, [menuOpen]);
-
+console.log(currentPath, "aqui")
   return (
     <>
-      <HeaderWrapper scrolled={scrolled}>
+      <S.HeaderWrapper scrolled={scrolled}>
         <Link href="/">
           <Text
             variant="bruno-faria-log"
@@ -47,7 +49,7 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
             Bruno Faria
           </Text>
         </Link>
-        <MenuIcon
+        <S.MenuIcon
           onClick={() => setMenuOpen(!menuOpen)}
           className={menuOpen ? "active" : ""}
         >
@@ -64,14 +66,14 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
           >
             en
           </Text>
-        </MenuIcon>
-      </HeaderWrapper>
-      <Menu isOpen={menuOpen}>
+        </S.MenuIcon>
+      </S.HeaderWrapper>
+      <S.Menu isOpen={menuOpen}>
         <Flex height="10vh" width="100%" justify="flex-end">
-          <CloseButton onClick={() => setMenuOpen(false)}>
+          <S.CloseButton onClick={() => setMenuOpen(false)}>
             <Text variant="text-menu-logo">FECHAR</Text>
             <Icon iconName="icon-close" size="big" color="light10" />
-          </CloseButton>
+          </S.CloseButton>
         </Flex>
         <Flex
           height="85vh"
@@ -82,16 +84,18 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
           align="center"
         >
           <Text variant="text-menu">MENU</Text>
-          <Div onClick={() => setMenuOpen(false)}>
+          <S.Section onClick={() => setMenuOpen(false)}>
             {mockItems.map((item, index) => (
               <Link href={item.url} key={index}>
-                <Text variant="text-name-menu">{item.name}</Text>
+                <S.TextNameMenu isActive={currentPath === item.pageName}>
+                  {item.name}
+                </S.TextNameMenu>
               </Link>
             ))}
-          </Div>
+          </S.Section>
         </Flex>
         <Copyright />
-      </Menu>
+      </S.Menu>
     </>
   );
 };
