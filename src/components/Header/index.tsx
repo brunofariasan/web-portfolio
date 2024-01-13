@@ -7,15 +7,17 @@ import Icon from "../micro/Icon";
 import Link from "next/link";
 import { mockItems } from "./mockData";
 import useWindowSize from "@/hooks/useWindowSize";
+import { HeaderProps } from "./types";
 
-const Header: React.FC = () => {
+const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
+  
   const { width } = useWindowSize();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    setScrolled(offset > 200);
+    setScrolled(offset > 50);
   };
 
   useEffect(() => {
@@ -37,7 +39,13 @@ const Header: React.FC = () => {
     <>
       <HeaderWrapper scrolled={scrolled}>
         <Link href="/">
-          <Text variant="bruno-faria-log">Bruno Faria</Text>
+          <Text
+            variant="bruno-faria-log"
+            headerColor={dynamicHeader && informationColor}
+            dynamicHeader={dynamicHeader && !scrolled}
+          >
+            Bruno Faria
+          </Text>
         </Link>
         <MenuIcon
           onClick={() => setMenuOpen(!menuOpen)}
@@ -47,9 +55,15 @@ const Header: React.FC = () => {
           <Icon
             iconName="icon-menu"
             size={width < 700 ? "large" : "big"}
-            color="light10"
+            color={!scrolled ? informationColor : "white"}
           />
-          <Text variant="text-language">en</Text>
+          <Text
+            variant="text-language"
+            headerColor={dynamicHeader && informationColor}
+            dynamicHeader={dynamicHeader && !scrolled}
+          >
+            en
+          </Text>
         </MenuIcon>
       </HeaderWrapper>
       <Menu isOpen={menuOpen}>

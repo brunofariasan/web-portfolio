@@ -10,9 +10,9 @@ import "@fontsource/zen-dots";
 
 export default function Page() {
   return (
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Home />
-      </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Home />
+    </ThemeProvider>
   );
 }
