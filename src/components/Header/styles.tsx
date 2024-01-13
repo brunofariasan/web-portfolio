@@ -57,6 +57,18 @@ export const CloseButton = styled.button`
   gap: 1rem;
 `;
 
-export const Div = styled.div`
+export const Section = styled.div`
+`;
 
+export const TextNameMenu = styled.p<{ isActive: boolean }>`
+  font-family: Montserrat;
+  font-size: 3.4rem;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 2.4px;
+  transition: background-color 0.3s ease;
+  color: ${(props) => (props.isActive ? "#f2f2f2" : "#878a8f")};
+  &:hover {
+    color: #f2f2f2;
+  }
 `;
