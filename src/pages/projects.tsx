@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Header />
+        <Header dynamicHeader informationColor="black"/>
         <SummaryAbout />
         <SelectedProjects />
         <Footer />

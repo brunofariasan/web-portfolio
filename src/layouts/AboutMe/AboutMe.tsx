@@ -7,7 +7,7 @@ import React from "react";
 export const AboutMe: React.FC = ({}) => {
   return (
     <>
-      <Header />
+      <Header dynamicHeader informationColor="black" />
       <About />
       <Skills />
       <Footer />

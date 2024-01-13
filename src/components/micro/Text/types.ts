@@ -26,11 +26,11 @@ type TextVariants =
   | "contact-section-title-description"
   | "description-contact"
   | "section-watermark-white" // texto marca d'agua da seção
-  | "text-name-menu" //texto do menu 
-  | "text-menu" //texto do menu 
-  | "bruno-faria-log" //texto do menu 
+  | "text-name-menu" //texto do menu
+  | "text-menu" //texto do menu
+  | "bruno-faria-log" //texto do menu
   | "text-menu-logo"
-  |"text-language"
+  |"text-language";
 
 // | "text-partner"; // texto de parceiro
 // | "title-section-description" //texto pequeno encima do titulo da seção
@@ -61,8 +61,12 @@ export type TextProps = {
   text?: string | JSX.Element;
   component?: TextComponent;
   textAlign?: "left" | "center" | "right" | "justify";
+  dynamicHeader?: true | false;
+  informationColor?: "white" | "black";
   children?: ReactNode;
+  colorWhenFalse?: string;
   link?: string;
   fontSize?: number;
   height?: number;
+  headerColor?: any;
 };
