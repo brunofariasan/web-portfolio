@@ -117,8 +117,6 @@ const textVariants = {
     font-weight: 700;
     line-height: 6rem; /* 26.042% */
     letter-spacing: 9.6px;
-
-
   `,
 
   "title-logo": css`

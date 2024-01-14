@@ -3,7 +3,6 @@ import Contac from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Map } from "@/components/Map";
-import { AnimatePresence } from "framer-motion";
 import Curve from "@/components/micro/Curve";
 
 export const Contact: React.FC = ({}) => {
