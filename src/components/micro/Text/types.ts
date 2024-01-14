@@ -30,11 +30,11 @@ type TextVariants =
   | "text-menu" //texto do menu
   | "bruno-faria-log" //texto do menu
   | "text-menu-logo"
-  |"text-language";
+  |"text-language"
+  | "title-section-slider" //titulo grande da seção de slider
 
 // | "text-partner"; // texto de parceiro
 // | "title-section-description" //texto pequeno encima do titulo da seção
-// | "title-section-slider" //titulo grande da seção de slider
 // | "text-menu" //text MENU
 // | "text-close" //text CLOSE
 // | "text-name-menu" //texto do menu

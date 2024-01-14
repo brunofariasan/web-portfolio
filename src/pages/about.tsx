@@ -8,6 +8,7 @@ import "@fontsource/signika/400.css";
 import "@fontsource/montserrat/700.css";
 import "@fontsource/zen-dots";
 import { AboutMe } from "@/layouts/AboutMe/AboutMe";
+import Curve from "@/components/micro/Curve";
 
 const AboutPage: React.FC = () => {
   return (
