@@ -36,7 +36,7 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
       document.body.style.overflow = "auto";
     }
   }, [menuOpen]);
-  console.log(currentPath, "aqui");
+  
   return (
     <>
       <S.HeaderWrapper scrolled={scrolled}>

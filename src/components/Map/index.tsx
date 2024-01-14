@@ -100,7 +100,6 @@ export function Map() {
           options={options}
         />
       </S.MapSection>
-
       <S.Section>
         <S.TextSection>
           <Flex justify="space-around">

@@ -1,32 +1,25 @@
-// @import '../components/Layout/Curve/style.scss';
 @import '../components/micro/Curve/style.scss';
 @import '../components/micro/Inner/style.scss';
 @import '../components/micro/Stairs/styles.scss';
 
 .main{
-    .header{
-        display: flex;
-        gap: 15px;
-        padding: 40px;
-        height: 30px;
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        a{
-            text-decoration: none;
-            color: black;
-            &:hover{
-                text-decoration: underline;
-            }
-        }
+  .header{
+    display: flex;
+    gap: 15px;
+    padding: 40px;
+    height: 30px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    a{
+      text-decoration: none;
+      color: black;
+      &:hover{
+        text-decoration: underline;
+      }
     }
-    .page{
-        //padding: 40px;
-        min-height: calc(100vh - 80px);
-    }
-    h1{
-      //  margin-top: 50px;
-    }
-   
-    
+  }
+  .page{
+    min-height: calc(100vh - 80px);
+  }
 }
