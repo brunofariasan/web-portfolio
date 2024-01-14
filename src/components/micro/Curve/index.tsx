@@ -7,12 +7,20 @@ interface Dimensions {
     width: number | null;
     height: number | null;
 }
-const routes = {
+interface RouteMap {
+    [key: string]: string;
+    "/": string;
+    "/about": string;
+    "/projects": string;
+    "/contact": string;
+}
+
+const routes: RouteMap = {
     "/": "Home",
     "/about": "About",
     "/projects": "Projects",
-    "/contact": "Contact"
-}
+    "/contact": "Contact",
+};
 
 const anim = (variants: any) => {
     return {
