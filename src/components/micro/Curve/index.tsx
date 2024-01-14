@@ -3,7 +3,10 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router';
 import { text, curve, translate } from './anim';
-
+interface Dimensions {
+    width: number | null;
+    height: number | null;
+}
 const routes = {
     "/": "Home",
     "/about": "About",
@@ -22,8 +25,8 @@ const anim = (variants: any) => {
 
 export default function Curve({children, backgroundColor}: any) {
     const router = useRouter();
-    const [dimensions, setDimensions] = useState({
-        width: null,
+    const [dimensions, setDimensions] = useState<Dimensions>({
+        width: null ,
         height: null 
     })
 
