@@ -39,7 +39,6 @@ export function Map() {
     top: "0",
     left: "0",
     width: "134%",
-    zIndex: "0",
   };
 
   const darkMapStyles = [

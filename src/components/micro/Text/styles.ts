@@ -106,17 +106,19 @@ const textVariants = {
     font-family: "Montserrat";
     text-align: end;
     max-height: 11.1rem;
-    line-height: 8.1rem;
+    line-height: 7rem;
   `,
 
   "section-watermark-white": css`
     color: rgba(255, 255, 255, 0.04);
     font-family: "Montserrat";
-    font-size: 9.6rem;
+    font-size: clamp(0.1rem, 2.8rem + 2.9vw, 9.6rem);;
     font-style: normal;
     font-weight: 700;
-    line-height: 7rem; /* 26.042% */
+    line-height: 6rem; /* 26.042% */
     letter-spacing: 9.6px;
+
+
   `,
 
   "title-logo": css`
@@ -339,6 +341,16 @@ const textVariants = {
     font-weight: 400;
     line-height: 2.5rem;
     letter-spacing: 2px;
+  `,
+
+  "title-section-slider": css`
+    color: ${theme.colors.white};
+    font-family: Montserrat;
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: 4.32px;
   `,
 };
 
