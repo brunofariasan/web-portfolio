@@ -7,11 +7,13 @@ import Curve from "@/components/micro/Curve";
 
 export const Contact: React.FC = ({}) => {
   return (
-    <Curve>
-      <Header />
-      <Map />
+    <>
+      <Curve>
+        <Header />
+        <Map />
         <Contac />
-      <Footer />
-    </Curve>
+        <Footer />
+      </Curve>
+    </>
   );
 };

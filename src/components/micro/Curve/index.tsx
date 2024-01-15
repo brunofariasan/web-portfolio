@@ -11,15 +11,15 @@ interface RouteMap {
     [key: string]: string;
     "/": string;
     "/about": string;
-    "/projects": string;
     "/contact": string;
+    "/projects": string;
 }
 
 const routes: RouteMap = {
     "/": "Home",
     "/about": "About",
-    "/projects": "Projects",
     "/contact": "Contact",
+    "/projects": "Projects",
 };
 
 const anim = (variants: any) => {
