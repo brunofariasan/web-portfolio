@@ -20,8 +20,8 @@ export const HeaderWrapper = styled.header<{ scrolled: boolean }>`
   transform: translateY(0px);
 
   @media (max-width: 750px) {
-    padding: 2rem 2rem;
-    max-height: 6rem;
+    padding: 1rem 2rem;
+    min-height: 4.5rem;
   }
 `;
 

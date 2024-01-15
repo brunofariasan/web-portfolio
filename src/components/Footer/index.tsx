@@ -27,15 +27,12 @@ export default function Footer() {
           <Flex gap="6px" flexDirection="column">
             {mockItems.map((item, index) => (
               <Link href={item.url} key={index}>
-              <Text variant="text-footer">{item.name}</Text>
-            </Link>
+                <Text variant="text-footer">{item.name}</Text>
+              </Link>
             ))}
           </Flex>
         </Flex>
-        <Flex flexDirection="column" gap="20px">
-          <Text variant="title-footer">{TEXT.TITLE_THREE}</Text>
-          <Text variant="text-footer">{TEXT.SKILLS}</Text>
-        </Flex>
+
         <Flex flexDirection="column" gap="20px">
           <Text variant="title-footer">Follow {br} me on — </Text>
           <Flex gap="6px" flexDirection="column">
@@ -45,6 +42,10 @@ export default function Footer() {
               </Link>
             ))}
           </Flex>
+        </Flex>
+        <Flex flexDirection="column" gap="20px">
+          <Text variant="title-footer">{TEXT.TITLE_THREE}</Text>
+          <Text variant="text-footer">{TEXT.SKILLS}</Text>
         </Flex>
       </S.TitleSection>
       <Flex flexDirection="column">

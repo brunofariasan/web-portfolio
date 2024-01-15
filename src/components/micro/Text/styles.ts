@@ -91,9 +91,35 @@ const textVariants = {
     letter-spacing: 0.11rem;
     font-family: "Montserrat", sans-serif;
     max-width: 31.1rem;
+    position: relative; 
+    transition: color 0.3s ease;
 
     @media (max-width: 718px) {
       max-width: 100%;
+    }
+
+    &:hover {
+      color: #d9d9d9;
+    }
+
+    /* Adiciona a linha com efeito de preenchimento automático */
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0; /* Começa com largura 0 para efeito de preenchimento automático */
+      height: 1px; /* Altura da linha */
+      background-color: #d9d9d9;
+      transition: width 0.3s ease; /* Adiciona transição suave para a largura ao passar o mouse */
+    }
+
+    &:hover:before {
+      width: 90%; /* Define a largura como 100% ao passar o mouse, preenchendo automaticamente */
+    }
+
+    @media (max-width: 750px) {
+      font-size: 1.8rem;
     }
   `,
 
@@ -107,12 +133,18 @@ const textVariants = {
     text-align: end;
     max-height: 11.1rem;
     line-height: 7rem;
+
+    @media (max-width: 750px) {
+      font-size: clamp(0.1rem, 2.8rem + 1.9vw, 4rem);
+      line-height: clamp(0.1rem, 2.8rem + 2.9vw, 4.6rem);
+      letter-spacing: 0rem;
+    }
   `,
 
   "section-watermark-white": css`
     color: rgba(255, 255, 255, 0.04);
     font-family: "Montserrat";
-    font-size: clamp(0.1rem, 2.8rem + 2.9vw, 9.6rem);;
+    font-size: clamp(0.1rem, 2.8rem + 2.9vw, 9.6rem);
     font-style: normal;
     font-weight: 700;
     line-height: 6rem; /* 26.042% */
@@ -164,6 +196,11 @@ const textVariants = {
     font-weight: 400;
     line-height: 2.5rem;
     letter-spacing: 2.34px;
+    @media (max-width: 750px) {
+      width: 100%;
+      text-align: end;
+      font-size: 1.3rem;
+    }
   `,
 
   "medium-text-about-me": css`
@@ -175,6 +212,11 @@ const textVariants = {
     line-height: 2.5rem;
     letter-spacing: 2.4px;
     max-width: 87.8rem;
+
+    @media (max-width: 750px) {
+      text-align: end;
+      font-size: 2.3rem;
+    }
   `,
 
   "end-text-about-me": css`
@@ -186,6 +228,10 @@ const textVariants = {
     line-height: 1.7rem;
     letter-spacing: 2.88px;
     max-width: 80rem;
+
+    @media (max-width: 750px) {
+      text-align: end;
+    }
   `,
 
   "text-main-technologies": css`
@@ -231,6 +277,10 @@ const textVariants = {
     line-height: 1.7rem;
     letter-spacing: 2.88px;
     max-width: 110rem;
+
+    @media (max-width: 750px) {
+     text-align: center;
+    }
   `,
 
   "title-on-top-of-map": css`
@@ -278,6 +328,7 @@ const textVariants = {
     max-width: 60rem;
     display: flex;
     align-self: auto;
+
   `,
 
   "text-name-menu": css`

@@ -11,7 +11,7 @@ export default function Skills() {
         <Text variant="project-quantity" component="h1">
           15+
         </Text>
-        <Flex flexDirection="column" gap="20px">
+        <S.Div>
           <Text variant="project-title" component="h1">
             PROJECTS COMPLETED
           </Text>
@@ -19,7 +19,7 @@ export default function Skills() {
             Nos ultimos 3 anos tenho trabalhado em grandes clientes da Compass.
             Nas horas vagas gosto de curtir uma boa musica e um filme
           </Text>
-        </Flex>
+        </S.Div>
       </S.TextSection>
       <S.SkillSection>
         <Text variant="section-watermark" component="h1">

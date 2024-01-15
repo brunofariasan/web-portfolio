@@ -13,14 +13,14 @@ export const CardSection = styled.div`
 
   @media (max-width: 1200px) {
     padding: 135.64px 0 102.7px;
-    padding-left: clamp(0.1rem, 0.8rem + 8.9vw, 36.2rem);
-    padding-right: clamp(0.1rem, 0.8rem + 8.9vw, 36.2rem);
+    padding-left: clamp(0.1rem,0.8rem + 1.9vw,36.2rem);
+    padding-right: clamp(0.1rem,0.8rem + 1.9vw,36.2rem);
   }
 `;
 
 export const TextSection = styled.div`
-  padding-left: clamp(0.1rem, 3.8rem + 1.9vw, 36.2rem);
-  padding-right: clamp(0.1rem, 3.8rem + 1.9vw, 36.2rem);
+  padding-left: clamp(0.1rem,1.8rem + 1.9vw,36.2rem);
+  padding-right: clamp(0.1rem,1.8rem + 1.9vw,36.2rem);
   display: flex;
   gap: 3.5rem;
   justify-content: center;

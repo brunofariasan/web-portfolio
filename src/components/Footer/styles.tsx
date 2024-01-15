@@ -38,8 +38,8 @@ export const FlexTitle = styled.div`
   max-width: 311px;
   gap: 20px;
 
-  @media (max-width: 520px) {
-    max-width: 100%;
+  @media (max-width: 750px) {
+    align-items: center;;
   }
 `;
 

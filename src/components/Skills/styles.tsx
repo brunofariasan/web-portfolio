@@ -14,14 +14,13 @@ export const TextSection = styled.div`
   min-height: 24.2rem;
   display: flex;
   justify-content: space-between;
-  padding-left: 6rem;
-  padding-right: 4rem;
+  padding: 7.2rem 2rem 5rem 2rem;
   align-items: center;
 
   @media (max-width: 79rem) {
     flex-direction: column;
     padding-top: 25px;
-    padding-bottom: 2.5rem;
+    //align-items: center;
     gap: 4.5rem;
   }
 `;
@@ -34,9 +33,18 @@ export const SkillSection = styled.div`
   justify-content: space-around;
 `;
 
+export const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;    
+  @media (max-width: 750px) {
+      align-items: center;
+    }
+`;
+
 export const TitleSection = styled.div`
   display: flex;
-  padding: 5rem;
+  padding: 7.2rem 2rem 5rem 2rem;
   justify-content: space-between;
   gap: 5rem;
 
