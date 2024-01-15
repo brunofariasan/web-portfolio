@@ -1,10 +1,12 @@
+import React, { useState, useEffect } from "react";
 import * as S from "./styles";
 import Text from "@/components/micro/Text";
 import { TEXT } from "./constants";
-import { useState, useEffect } from "react";
 
 export default function Banner() {
   const [scrollVisible, setScrollVisible] = useState(true);
+  const [textToShow, setTextToShow] = useState("");
+  const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,34 @@ export default function Banner() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const text = TEXT.SUB_TITLE_BANNER;
+    let index = 0;
+
+    const intervalId = setInterval(() => {
+      if (index <= text.length) {
+        setTextToShow(text.slice(0, index));
+        index++;
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 120); // Ajustado para 120 milissegundos
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setCursorVisible((prev) => !prev);
+    }, 600); // ajustado p/ 600 milissegundos
+
+    return () => {
+      clearInterval(cursorInterval);
     };
   }, []);
 
@@ -31,7 +61,11 @@ export default function Banner() {
         <S.Content>
           <S.FlexVideo>
             <Text variant="title-banner">{TEXT.TITLE_BANNER}</Text>
-            <Text variant="title-banner-sub">{TEXT.SUB_TITLE_BANNER}</Text>
+            <Text variant="title-banner-sub">
+              {" "}
+              {textToShow}
+              {cursorVisible && "|"}
+            </Text>
           </S.FlexVideo>
         </S.Content>
         {/* <S.ScrollDownAnimation visible={scrollVisible}>
