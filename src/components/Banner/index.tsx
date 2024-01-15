@@ -24,7 +24,7 @@ export default function Banner() {
       <S.VideoContainer>
         <video autoPlay loop muted playsInline>
           <source
-            src="https://res.cloudinary.com/ddanq3pco/video/upload/v1705269261/video_b4ilrm.mp4"
+            src="https://res.cloudinary.com/ddanq3pco/video/upload/f_auto:video,q_auto/qc1h83bxwaz0bh1fi93m"
             type="video/mp4"
           />
         </video>

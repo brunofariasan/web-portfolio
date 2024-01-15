@@ -1,16 +1,21 @@
-import Footer from "@/components/Footer";
+import React from "react";
 import Header from "@/components/Header";
 import SelectedProjects from "@/components/SelectedProjects";
 import SummaryAbout from "@/components/SummaryAbout";
-import React from "react";
+import Footer from "@/components/Footer";
+import Curve from "@/components/micro/Curve";
 
-export const Projects: React.FC = ({}) => {
+const Projects: React.FC = () => {
   return (
     <>
-      <Header />
-      <SummaryAbout />
-      <SelectedProjects />
-      <Footer />
+      <Curve>
+        <Header dynamicHeader informationColor="black" />
+        <SummaryAbout />
+        <SelectedProjects />
+        <Footer />
+      </Curve>
     </>
   );
 };
+
+export default Projects;
