@@ -30,6 +30,9 @@ export const Content = styled.div`
 
 export const FlexVideo = styled.div`
   max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 `;
 
 
