@@ -7,7 +7,7 @@ const textVariants = {
     color: ${({ theme }) => theme.colors.white};
     font-size: clamp(0.1rem, 2.8rem + 2.9vw, 6rem);
     letter-spacing: 0.5rem;
-    line-height: clamp(0.1rem, 3.8rem + 2.9vw, 6.2rem);
+    line-height: clamp(0.1rem, 3.2rem + 2.9vw, 6.2rem);
     user-select: none;
     padding: 0 1.5rem 0 1.5rem;
   `,
@@ -91,7 +91,7 @@ const textVariants = {
     letter-spacing: 0.11rem;
     font-family: "Montserrat", sans-serif;
     max-width: 31.1rem;
-    position: relative; 
+    position: relative;
     transition: color 0.3s ease;
 
     @media (max-width: 718px) {
@@ -279,7 +279,7 @@ const textVariants = {
     max-width: 110rem;
 
     @media (max-width: 750px) {
-     text-align: center;
+      text-align: center;
     }
   `,
 
@@ -328,7 +328,6 @@ const textVariants = {
     max-width: 60rem;
     display: flex;
     align-self: auto;
-
   `,
 
   "text-name-menu": css`
@@ -400,6 +399,16 @@ const textVariants = {
     font-weight: 700;
     line-height: 2.5rem;
     letter-spacing: 4.32px;
+  `,
+
+  "title-section-card": css`
+    font-family: "Montserrat";
+    font-size: clamp(0.1rem, 1.8rem + 2.9vw, 4.8rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: clamp(0.1rem, 1.8rem + 2.9vw, 5rem);
+   // letter-spacing: 0.6rem;
+    padding-top: 5rem;
   `,
 };
 
