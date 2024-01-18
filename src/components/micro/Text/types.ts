@@ -32,6 +32,7 @@ type TextVariants =
   | "text-menu-logo"
   |"text-language"
   | "title-section-slider" //titulo grande da seção de slider
+  | "title-section-card" //titulo grande da seção de slider
 
 // | "text-partner"; // texto de parceiro
 // | "title-section-description" //texto pequeno encima do titulo da seção

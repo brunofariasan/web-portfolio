@@ -1,15 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Container = styled.div` `;
+export const Container = styled.div``;
 
 export const VideoContainer = styled.div`
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100vh;
-  padding-bottom: 56.25%; 
+  padding-bottom: 56.25%;
   video {
-    //width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -19,13 +18,13 @@ export const VideoContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+  position: inherit;
   text-align: center;
-  color: #fff; 
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const FlexVideo = styled.div`
@@ -34,7 +33,6 @@ export const FlexVideo = styled.div`
   flex-direction: column;
   gap: 2rem;
 `;
-
 
 // const bounce = keyframes`
 //   0%, 20%, 50%, 80%, 100% {
