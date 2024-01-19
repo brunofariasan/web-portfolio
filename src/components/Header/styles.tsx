@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.header<{ scrolled: boolean }>`
   transition: background-color 0.3s;
   display: flex;
   align-items: center;
-  padding: 3rem 3rem;
+  padding: 1.3rem 3rem;
   z-index: 5;
   justify-content: space-between;
   transition: 0.6s;
@@ -57,10 +57,12 @@ export const CloseButton = styled.button`
   gap: 1rem;
 `;
 
-export const Section = styled.div`
-`;
+export const Section = styled.ul``;
 
-export const TextNameMenu = styled.p<{ isActive: boolean }>`
+export const TextNameMenu = styled.li<{ isActive: boolean }>`
+ margin: 0;
+  padding: 0;
+  list-style: none;
   font-family: Montserrat;
   font-size: 3.4rem;
   font-style: normal;
@@ -71,4 +73,129 @@ export const TextNameMenu = styled.p<{ isActive: boolean }>`
   &:hover {
     color: #f2f2f2;
   }
+`;
+
+export const Div = styled.div`
+  display: flex;
+  //gap: 1.5rem;
+  font-family: Poppins;
+  text-transform: uppercase;
+  font-size: 18px;
+  align-items: center;
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  background-color: transparent;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+
+  @media (max-width: 750px) {
+    //min-width: 100%;
+    justify-content: center;
+  }
+`;
+
+export const Navbar = styled.div`
+  @media (max-width: 900px) {
+    Nav {
+      display: none;
+    }
+  }
+`;
+
+export const Nav = styled.nav`
+  Ul {
+    display: flex;
+  }
+`;
+
+export const Ul = styled.ul`
+  A:hover {
+    border-bottom: 2px solid yellow;
+  }
+`;
+
+export const Li = styled.li`
+  height: 65px;
+  //width: 105px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 750px) {
+    /* min-width: 100%;
+    justify-content: center; */
+  }
+`;
+
+export const LanguageSelectionSession = styled.div`
+  width: 80px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media (max-width: 750px) {
+
+
+  }
+`;
+
+export const IdiomaName = styled.div`
+  cursor: pointer;
+  background-color: transparent;
+`;
+
+export const Idioma = styled.p`
+  color: white;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #FFFFFF;
+    text-align: center;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 2.5rem;
+    letter-spacing: 2px;
+    font-family: 'Montserrat';
+
+  &:hover {
+    color: #ffb800;
+  }
+`;
+
+export const SectionButton = styled.div`
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 48px;
+  gap: 5px;
+  img {
+    border-radius: 20%;
+  }
+
+  @media (max-width: 750px) {
+    //mobile
+   
+  }
+`;
+
+export const A = styled.a`
+  color: black;
+  font-size: 16px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background 0.4s;
+  text-transform: uppercase;
+  cursor: pointer;
 `;

@@ -9,6 +9,7 @@ import "@fontsource/signika/400.css";
 import "@fontsource/montserrat/700.css";
 import "@fontsource/zen-dots";
 import "@/styles/styles.scss";
+import "../translations/i18n";
 
 export default function App({ Component, pageProps, router }: any) {
   return (

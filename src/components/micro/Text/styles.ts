@@ -383,12 +383,13 @@ const textVariants = {
   "text-language": css`
     color: ${theme.colors.white};
     text-align: center;
-    font-family: Zen Dots;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 900;
     line-height: 2.5rem;
     letter-spacing: 2px;
+
+    font-family: 'Montserrat';
   `,
 
   "title-section-slider": css`
