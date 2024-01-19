@@ -9,6 +9,10 @@ import { mockItems } from "./mockData";
 import useWindowSize from "@/hooks/useWindowSize";
 import { HeaderProps } from "./types";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
+import usa from "../../assets/eua.svg";
+import br from "../../assets/br.svg";
+import { changeLanguage } from "i18next";
 
 const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
   const router = useRouter();
@@ -29,14 +33,22 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
     };
   }, []);
 
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [menuOpen]);
-  
+  const { t, i18n } = useTranslation();
+  const i18nRef = React.useRef(i18n); // Add this line
+  const [curentLanguage, setCurentLanguage] = useState(i18n.language); // Use i18n.language directly
+  const [showDiv, setShowDiv] = useState(false);
+
+  const handleLanguage = () => {
+    const newLanguage = curentLanguage === "en" ? "pt" : "en";
+    changeLanguage(newLanguage);
+    setCurentLanguage(newLanguage);
+    setShowDiv(!showDiv);
+  };
+
+  const handleButtonClick = () => {
+    setShowDiv(!showDiv);
+  };
+
   return (
     <>
       <S.HeaderWrapper scrolled={scrolled}>
@@ -49,29 +61,49 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
             Bruno Faria
           </Text>
         </Link>
-        <S.MenuIcon
-          onClick={() => setMenuOpen(!menuOpen)}
-          className={menuOpen ? "active" : ""}
-        >
-          {/* <Text variant="text-menu-logo">MENU</Text> */}
-          <Icon
-            iconName="icon-menu"
-            size={width < 700 ? "large" : "big"}
-            color={!scrolled ? informationColor : "white"}
-          />
-          <Text
-            variant="text-language"
-            headerColor={dynamicHeader && informationColor}
-            dynamicHeader={dynamicHeader && !scrolled}
+        <S.Div>
+          <S.MenuIcon
+            onClick={() => setMenuOpen(!menuOpen)}
+            className={menuOpen ? "active" : ""}
           >
-            en
-          </Text>
-        </S.MenuIcon>
+            {/* <Text variant="text-menu-logo">MENU</Text> */}
+            <Icon
+              iconName="icon-menu"
+              size={width < 700 ? "large" : "big"}
+              color={!scrolled ? informationColor : "white"}
+            />
+          </S.MenuIcon>
+
+          <S.Li>
+            <S.LanguageSelectionSession onClick={handleButtonClick}>
+              <S.IdiomaName>
+                <Text
+                  variant="text-language"
+                  headerColor={dynamicHeader && informationColor}
+                  dynamicHeader={dynamicHeader && !scrolled}
+                >
+                  {curentLanguage}
+                </Text>
+              </S.IdiomaName>
+              {showDiv && (
+                <S.SectionButton>
+                  <S.Button>
+                    {curentLanguage === "pt" ? (
+                      <img src={usa.src} onClick={handleLanguage} />
+                    ) : (
+                      <img src={br.src} onClick={handleLanguage} />
+                    )}
+                  </S.Button>
+                </S.SectionButton>
+              )}
+            </S.LanguageSelectionSession>
+          </S.Li>
+        </S.Div>
       </S.HeaderWrapper>
       <S.Menu isOpen={menuOpen}>
         <Flex height="10vh" width="100%" justify="flex-end">
           <S.CloseButton onClick={() => setMenuOpen(false)}>
-            <Text variant="text-menu-logo">FECHAR</Text>
+            <Text variant="text-menu-logo">{t("close")}</Text>
             <Icon iconName="icon-close" size="big" color="light10" />
           </S.CloseButton>
         </Flex>
@@ -88,11 +120,38 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
             {mockItems.map((item, index) => (
               <Link href={item.url} key={index}>
                 <S.TextNameMenu isActive={currentPath === item.pageName}>
-                  {item.name}
+                {t(item.name)}
                 </S.TextNameMenu>
               </Link>
             ))}
           </S.Section>
+          <S.Li>
+            <S.LanguageSelectionSession onClick={handleButtonClick}>
+              <S.IdiomaName>
+                <S.Idioma
+                >
+                  {curentLanguage}
+                </S.Idioma>
+              </S.IdiomaName>
+              {showDiv && (
+                <S.SectionButton onClick={handleLanguage}>
+                  <S.Idioma
+                  >
+                    {curentLanguage === "pt"
+                      ? t("english") + " - "
+                      : t("portuguese") + " - "}
+                  </S.Idioma>
+                  <S.Button>
+                    {curentLanguage === "en" ? (
+                      <img src={br.src} />
+                    ) : (
+                      <img src={usa.src} />
+                    )}
+                  </S.Button>
+                </S.SectionButton>
+              )}
+            </S.LanguageSelectionSession>
+          </S.Li>
         </Flex>
         <Copyright />
       </S.Menu>

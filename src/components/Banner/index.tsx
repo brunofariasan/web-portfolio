@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import * as S from "./styles";
 import Text from "@/components/micro/Text";
 import { TEXT } from "./constants";
+import { useTranslation } from "react-i18next";
 
 export default function Banner() {
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
   const [scrollVisible, setScrollVisible] = useState(true);
   const [textToShow, setTextToShow] = useState("");
   const [cursorVisible, setCursorVisible] = useState(true);
@@ -22,7 +27,7 @@ export default function Banner() {
   }, []);
 
   useEffect(() => {
-    const text = TEXT.SUB_TITLE_BANNER;
+    const text = t("ideasIntoReality");
     let index = 0;
 
     const intervalId = setInterval(() => {
@@ -60,7 +65,7 @@ export default function Banner() {
         </video>
         <S.Content>
           <S.FlexVideo>
-            <Text variant="title-banner">{TEXT.TITLE_BANNER}</Text>
+            <Text variant="title-banner">{t("softwareEngineer")}</Text>
             <Text variant="title-banner-sub">
               {" "}
               {textToShow}

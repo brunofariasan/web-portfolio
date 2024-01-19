@@ -28,7 +28,7 @@ export const Content = styled.div`
 `;
 
 export const FlexVideo = styled.div`
-  max-width: 450px;
+  max-width: 560px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
