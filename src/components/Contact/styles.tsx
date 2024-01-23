@@ -11,17 +11,18 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.div`
-  padding: 5.8rem 7rem 5rem 7rem;
+  padding: 5.8rem 7rem 12rem 7rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 8rem;
 
   @media (max-width: 880px) {
     flex-direction: column;
+    gap: 3rem;
   }
 
   @media (max-width: 700px) {
-    padding: 5rem 3rem 4rem 4rem;
+    padding: 5rem 3rem 12rem 4rem;
   }
 `;
 

@@ -34,7 +34,7 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
   }, []);
 
   const { t, i18n } = useTranslation();
-  const i18nRef = React.useRef(i18n); // Add this line
+  const i18nRef = React.useRef(i18n);
   const [curentLanguage, setCurentLanguage] = useState(i18n.language); // Use i18n.language directly
   const [showDiv, setShowDiv] = useState(false);
 
@@ -75,28 +75,31 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
           </S.MenuIcon>
 
           <S.Li>
-            <S.LanguageSelectionSession onClick={handleButtonClick}>
-              <S.IdiomaName>
-                <Text
-                  variant="text-language"
-                  headerColor={dynamicHeader && informationColor}
-                  dynamicHeader={dynamicHeader && !scrolled}
-                >
-                  {curentLanguage}
-                </Text>
-              </S.IdiomaName>
-              {showDiv && (
-                <S.SectionButton>
-                  <S.Button>
-                    {curentLanguage === "pt" ? (
-                      <img src={usa.src} onClick={handleLanguage} />
-                    ) : (
-                      <img src={br.src} onClick={handleLanguage} />
-                    )}
-                  </S.Button>
-                </S.SectionButton>
-              )}
-            </S.LanguageSelectionSession>
+            {width >= 750 && (
+              <S.LanguageSelectionSession onClick={handleButtonClick}>
+                <S.IdiomaName>
+                  <Text
+                    variant="text-language"
+                    headerColor={dynamicHeader && informationColor}
+                    dynamicHeader={dynamicHeader && !scrolled}
+                  >
+                    {curentLanguage}
+                  </Text>
+                </S.IdiomaName>
+
+                {showDiv && (
+                  <S.SectionButton>
+                    <S.Button>
+                      {curentLanguage === "pt" ? (
+                        <img src={usa.src} onClick={handleLanguage} />
+                      ) : (
+                        <img src={br.src} onClick={handleLanguage} />
+                      )}
+                    </S.Button>
+                  </S.SectionButton>
+                )}
+              </S.LanguageSelectionSession>
+            )}
           </S.Li>
         </S.Div>
       </S.HeaderWrapper>
@@ -120,23 +123,20 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
             {mockItems.map((item, index) => (
               <Link href={item.url} key={index}>
                 <S.TextNameMenu isActive={currentPath === item.pageName}>
-                {t(item.name)}
+                  {t(item.url)}
                 </S.TextNameMenu>
               </Link>
             ))}
           </S.Section>
           <S.Li>
+          {width <= 750 && (
             <S.LanguageSelectionSession onClick={handleButtonClick}>
               <S.IdiomaName>
-                <S.Idioma
-                >
-                  {curentLanguage}
-                </S.Idioma>
+                <S.Idioma>{curentLanguage}</S.Idioma>
               </S.IdiomaName>
               {showDiv && (
                 <S.SectionButton onClick={handleLanguage}>
-                  <S.Idioma
-                  >
+                  <S.Idioma>
                     {curentLanguage === "pt"
                       ? t("english") + " - "
                       : t("portuguese") + " - "}
@@ -151,6 +151,7 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
                 </S.SectionButton>
               )}
             </S.LanguageSelectionSession>
+          )}
           </S.Li>
         </Flex>
         <Copyright />

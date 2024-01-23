@@ -20,14 +20,14 @@ const textVariants = {
     line-height: 2.5rem;
     letter-spacing: 0.12rem;
     user-select: none;
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 2.5rem 0 2.5rem;
   `,
   "text-icon": css`
     color: ${({ theme }) => theme.colors.white};
     font-size: 1.1rem;
     font-style: normal;
     font-weight: 800;
-    line-height: 2.5rem;
+    line-height: 1.8rem;
     letter-spacing: 0.11rem;
     user-select: none;
     font-family: "Inter", sans-serif;
@@ -165,9 +165,19 @@ const textVariants = {
     font-size: clamp(0.1rem, 1.8rem + 2.9vw, 4.8rem);
     font-style: normal;
     font-weight: 700;
-    line-height: clamp(0.1rem, 1.8rem + 2.9vw, 5rem);
-    letter-spacing: 0.6rem;
+    line-height: clamp(0.1rem, 1.8rem + 2.9vw, 4.5rem);
+    letter-spacing: 0.3rem;
     max-width: 50rem;
+  `,
+
+  "main-text-projects": css`
+    font-family: "Montserrat";
+    font-size: clamp(0.1rem, 1.8rem + 2.9vw, 4.8rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: clamp(0.1rem, 1.8rem + 2.9vw, 4.5rem);
+    letter-spacing: 0.3rem;
+    max-width: 34rem;
   `,
 
   "final-text-about-me": css`
@@ -299,8 +309,8 @@ const textVariants = {
     font-style: normal;
     font-weight: 700;
     line-height: 4.5rem;
-    letter-spacing: 4px;
-    max-width: 25rem;
+    letter-spacing: 2px;
+    max-width: 33rem;
 
     @media (max-width: 880px) {
       max-width: 100%;
@@ -389,7 +399,7 @@ const textVariants = {
     line-height: 2.5rem;
     letter-spacing: 2px;
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
   `,
 
   "title-section-slider": css`
@@ -408,8 +418,21 @@ const textVariants = {
     font-style: normal;
     font-weight: 700;
     line-height: clamp(0.1rem, 1.8rem + 2.9vw, 5rem);
-   // letter-spacing: 0.6rem;
+    // letter-spacing: 0.6rem;
     padding-top: 5rem;
+  `,
+
+  "text-tech-slide": css`
+    color: ${({ theme }) => theme.colors.black};
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.9rem;
+    letter-spacing: 0.11rem;
+    font-family: "Montserrat", sans-serif;
+    max-width: 31.1rem;
+    position: relative;
+    transition: color 0.3s ease;
   `,
 };
 

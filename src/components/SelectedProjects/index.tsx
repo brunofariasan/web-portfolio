@@ -4,15 +4,16 @@ import { TEXT } from "./constants";
 import * as S from "./styles";
 import { mockItems } from "./mockData";
 import Image from "../micro/Image";
+import { useTranslation } from "react-i18next";
 
 export default function SelectedProjects() {
-
+  const { t } = useTranslation();
   return (
     <S.Container>
       <S.TextSection>
         <Text variant="title-logo">{TEXT.NAME_LOGO}</Text>
         <Flex gap="3.5rem" flexDirection="column">
-          <Text variant="main-text-about-me">{TEXT.MAIN_TITLE}</Text>
+          <Text variant="main-text-projects">{t("topProjects")}</Text>
           <S.FlexContainer>
             {mockItems.map((item, index) => (
               <S.Layout key={index}>

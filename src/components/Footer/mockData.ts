@@ -2,7 +2,7 @@ export const mockItems = [
   { name: "Livelo", url: "projects" },
   { name: "Porto Seguros", url: "projects" },
   { name: "Blog Compass", url: "projects" },
-  { name: "All projects", url: "projects" },
+  { name: "allProjects", url: "projects" },
 ];
 
 export const mockRedes = [
