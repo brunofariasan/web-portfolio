@@ -5,12 +5,17 @@ import { TEXT } from "./constants";
 import * as S from "./styles";
 import emailjs from "@emailjs/browser";
 import Spinner from "../micro/Spinner/Spinner";
+import { useTranslation } from "react-i18next";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { width } = useWindowSize();
+  const br = width > 830 ? <br /> : "";
 
   function sendEmail(e: any) {
     e.preventDefault();
@@ -50,50 +55,52 @@ export default function Contact() {
       <S.Section>
         <Flex flexDirection="column">
           <Text variant="contact-section-title-description">
-            {TEXT.TEXT_PROJECTS}
+            {t("contactTitle")}
           </Text>
-          <Text variant="title-section-contact">Get in touch —</Text>
+          <Text variant="title-section-contact">
+            {t("lets")} {br} {t("talk")}
+          </Text>
         </Flex>
         <Flex flexDirection="column" gap="2.5rem">
-          <Text variant="description-contact">{TEXT.DESCRIPTION}</Text>
+          <Text variant="description-contact">{t("message")}</Text>
           <S.Form onSubmit={sendEmail}>
             <S.Inputs>
               <Flex flexDirection="column" width="100%">
-                <S.Label htmlFor="name">Nome</S.Label>
+                <S.Label htmlFor="name">{t("name")}</S.Label>
                 <S.Input
                   type="text"
-                  placeholder="Digite seu nome"
+                  placeholder={t("yourName")}
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                   required
                 />
               </Flex>
               <Flex flexDirection="column" width="100%">
-                <S.Label htmlFor="email">E-mail</S.Label>
+                <S.Label htmlFor="email">{t("email")}</S.Label>
                 <S.Input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Digite seu e-mail"
+                  placeholder={t("youtEmail")}
                   required
                 />
               </Flex>
             </S.Inputs>
             <Flex flexDirection="column" width="100%">
-              <S.Label htmlFor="message">Mensagem</S.Label>
+              <S.Label htmlFor="message">{t("textMessage")}</S.Label>
               <S.Input
                 as="textarea"
                 id="message"
                 name="message"
                 value={message}
-                placeholder="Digite sua mensagem aqui"
+                placeholder={t("youtMessage")}
                 onChange={(e) => setMessage(e.target.value)}
                 rows={4}
                 required
               ></S.Input>
             </Flex>
             <S.Button type="submit" onSubmit={sendEmail}>
-              {TEXT.TEXT_BUTTON}
+              {t("sendMessage")}
             </S.Button>
           </S.Form>
         </Flex>

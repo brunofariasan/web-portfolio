@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?rarxrs');
-  src:  url('fonts/icomoon.eot?rarxrs#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?rarxrs') format('truetype'),
-    url('fonts/icomoon.woff?rarxrs') format('woff'),
-    url('fonts/icomoon.svg?rarxrs#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?b9iou3');
+  src:  url('fonts/icomoon.eot?b9iou3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?b9iou3') format('truetype'),
+    url('fonts/icomoon.woff?b9iou3') format('woff'),
+    url('fonts/icomoon.svg?b9iou3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-php:before {
+  content: "\e90a";
+}
+.icon-aem:before {
+  content: "\e906";
+}
+.icon-adobe-comm:before {
+  content: "\e908";
+}
+.icon-figma-svgrepo-com:before {
+  content: "\e91b";
+}
+.icon-javascript-new:before {
+  content: "\e91c";
+}
+.icon-styled-components:before {
+  content: "\e91d";
+}
+.icon-gitlab:before {
+  content: "\e91e";
+}
 .icon-bitbucket:before {
   content: "\e905";
 }
@@ -66,29 +87,22 @@
 }
 .icon-close:before {
   content: "\e910";
-  color: #fff;
 }
 .icon-jira:before {
   content: "\e911";
-  color: #fff;
 }
 .icon-javascript:before {
   content: "\e912";
-  color: #fff;
 }
 .icon-git:before {
   content: "\e913";
-  color: #fff;
 }
 .icon-typescript:before {
   content: "\e914";
-  color: #fff;
 }
 .icon-figma:before {
   content: "\e915";
-  color: #fff;
 }
 .icon-nodejs:before {
   content: "\e916";
-  color: #fff;
 }

@@ -8,33 +8,41 @@ import { theme } from "@/styles/theme";
 import Copyright from "../micro/Copyright";
 import useWindowSize from "@/hooks/useWindowSize";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const { width } = useWindowSize();
   const br = width > 830 ? <br /> : "";
+  const { t } = useTranslation();
   return (
     <S.Container>
       <S.TitleSection>
         <S.FlexContainer>
           <Flex flexDirection="column" gap="20px">
-            <Text variant="title-footer">Contact {br} information —</Text>
-            <Text variant="text-footer">{TEXT.TEXT_FOOTER}</Text>
+            <Text variant="title-footer">
+              {t("footerContact")} {br} {t("information")}
+            </Text>
+            <Text variant="text-footer">{t("feelFree")}</Text>
             <Text variant="text-footer">{TEXT.TEXT_EMAIL}</Text>
           </Flex>
         </S.FlexContainer>
         <Flex flexDirection="column" gap="20px">
-          <Text variant="title-footer">Latest {br} projects —</Text>
+          <Text variant="title-footer">
+            {t("latest")} {br} {t("projectsText")}{" "}
+          </Text>
           <Flex gap="6px" flexDirection="column">
             {mockItems.map((item, index) => (
               <Link href={item.url} key={index}>
-                <Text variant="text-footer">{item.name}</Text>
+                <Text variant="text-footer">{t(item.name)}</Text>
               </Link>
             ))}
           </Flex>
         </Flex>
 
         <Flex flexDirection="column" gap="20px">
-          <Text variant="title-footer">Follow {br} me on — </Text>
+          <Text variant="title-footer">
+            {t("follow")} {br} {t("me")}{" "}
+          </Text>
           <Flex gap="6px" flexDirection="column">
             {mockRedes.map((item, index) => (
               <Link href={item.url} key={index}>

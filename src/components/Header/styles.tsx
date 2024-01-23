@@ -21,7 +21,7 @@ export const HeaderWrapper = styled.header<{ scrolled: boolean }>`
 
   @media (max-width: 750px) {
     padding: 1rem 2rem;
-    min-height: 4.5rem;
+    max-height: 4.5rem;
   }
 `;
 
@@ -123,7 +123,7 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
-  height: 65px;
+  //height: 1rem;
   //width: 105px;
   display: flex;
   align-items: center;
@@ -144,7 +144,7 @@ export const LanguageSelectionSession = styled.div`
   position: relative;
 
   @media (max-width: 750px) {
-
+    height: 25px;
 
   }
 `;

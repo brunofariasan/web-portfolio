@@ -102,25 +102,25 @@ export function Map() {
       </S.MapSection>
       <S.Section>
         <S.TextSection>
-          <Flex justify="space-around">
+        <Flex justify="space-around">
             <S.I>
               <Text variant="title-on-top-of-map" component="h1">
-                L
+                W
               </Text>
             </S.I>
             <S.I>
               <Text variant="title-on-top-of-map" component="h1">
-                E
+                O
               </Text>
             </S.I>
             <S.I>
               <Text variant="title-on-top-of-map" component="h1">
-                {TEXT.TEXT_T}
+                R
               </Text>
             </S.I>
             <S.I>
               <Text variant="title-on-top-of-map" component="h1">
-                S
+                K
               </Text>
             </S.I>
           </Flex>
@@ -150,7 +150,7 @@ export function Map() {
           <Flex justify="space-around">
             <S.I>
               <Text variant="title-on-top-of-map" component="h1">
-                T
+                W
               </Text>
             </S.I>
             <S.I>
@@ -160,12 +160,12 @@ export function Map() {
             </S.I>
             <S.I>
               <Text variant="title-on-top-of-map" component="h1">
-                G
+                R
               </Text>
             </S.I>
             <S.I>
               <Text variant="title-on-top-of-map" component="h1">
-                E
+                K
               </Text>
             </S.I>
           </Flex>

@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import Flex from "../micro/Flex";
 import Text from "../micro/Text";
 import { TEXT } from "./constants";
 import * as S from "./styles";
 
 export default function About() {
+  const { t } = useTranslation();
   return (
     <S.Container>
       <Text variant="section-watermark" component="h1">
@@ -12,7 +14,7 @@ export default function About() {
       <S.TextSection>
         <Flex gap="2.2rem" flexDirection="column" align="center">
           <Text variant="small-text-about-me">{TEXT.TEXT_START}</Text>
-          <Text variant="medium-text-about-me">{TEXT.TEXT_MEDIUM}</Text>
+          <Text variant="medium-text-about-me">{t("myName")}</Text>
           <Text variant="end-text-about-me">{TEXT.TEXT_END}</Text>
         </Flex>
       </S.TextSection>

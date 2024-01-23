@@ -9,6 +9,11 @@ export const Container = styled.div`
   position: sticky;
   top: 0px;
   //*
+  mix-blend-mode: luminosity;
+
+  &:hover {
+    mix-blend-mode: normal;
+  }
 
   .card {
     display: flex;
@@ -20,9 +25,9 @@ export const Container = styled.div`
     width: 1000px;
     max-width: 100%;
     border-radius: 25px;
-    padding:50px;
+    padding: 50px;
     transform-origin: top;
-    box-shadow: 2px 4px 4px 0px rgba(0,0,0,0.25);
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     @media (max-width: 1200px) {
       width: 100%;
@@ -60,15 +65,19 @@ export const Inner = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+  // padding-top: 4.6rem;
+  //opacity: 0.5;
+  @media (max-width: 750px) {
+    margin-top: 2.2rem;
+  }
 `;
 export const ImageContainer = styled.div`
   position: relative;
   width: 60%;
-  height: 100%;
+  //height: 100%;
   border-radius: 25px;
   overflow: hidden;
 
-  mix-blend-mode: luminosity;
   @media (max-width: 750px) {
     width: 100%;
   }
@@ -76,12 +85,15 @@ export const ImageContainer = styled.div`
 
 export const Body = styled.div`
   display: flex;
-  margin-top: 50px;
-  gap: 50px;
+  margin-top: 5rem;
+  gap: 5rem;
+  min-height: 230px;
+  justify-content: flex-end;
 
   @media (max-width: 750px) {
     flex-direction: column;
-    gap: 0px;
+   gap: 0rem;
+    margin-top: 1.5rem;
   }
 `;
 
@@ -95,7 +107,8 @@ export const Div = styled.div`
 
   @media (max-width: 750px) {
     padding-right: 0rem;
-    padding-bottom: 5rem;
+    padding-bottom: 4.5rem;
+    gap: 1.2rem;
     width: 100%;
     justify-content: center;
     border-right: 0px;
@@ -116,17 +129,17 @@ export const Div2 = styled.div`
 
 export const H2 = styled.h2`
   font-family: Montserrat;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-style: normal;
-  font-weight: 700;
-  line-height: 2.5rem;
-  letter-spacing: 2.4px;
+  font-weight: 900;
+  line-height: 2rem;
+  letter-spacing: 2px;
 `;
 
 export const H4 = styled.h2`
   text-align: start;
   font-family: "inter";
-  max-width: 540px;
+  //max-width: 540px;
   font-size: 1.6rem;
   //background-color: #727171;
   font-weight: 500;

@@ -1,40 +1,88 @@
-
 export const projects = [
   {
-    title: "",
-    description: "Desenvolvimento de portal adminstrador para geração de cupom.",
+    title: "Mecânica promocional",
+    description:
+      "Desenvolvimento de portal administrativo para a criação de cupons destinados aos clientes do clube de pontos.",
     src: "livelo-new-logo.svg",
     link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
     color: "#808080",
-    icon: ["icon-react", "icon-scrum", "icon-jest", "icon-less"],
-    empresa: "Livelo"
+    icon: [
+      "icon-react",
+      "icon-scrum",
+      "icon-jest",
+      "icon-javascript",
+      "icon-figma",
+      "icon-git",
+      "icon-nodejs",
+      "icon-jira",
+      "icon-styled-components",
+      "icon-gitlab",
+    ],
+    empresa: "Livelo",
   },
   {
-    title: "",
-    description: "Desenvolvimento checkout e carrinho.",
+    title: "Checkout",
+    description:
+      "Desenvolvimento de sistema de carrinho de compras, juntamente com uma experiência de checkout eficiente, visando proporcionar aos usuários uma jornada de compra intuitiva.",
     src: "Logos_Porto.svg",
     link: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
     color: "#808080",
-    icon: [ "icon-next-js", "icon-react", "icon-scrum", "icon-jest", "icon-less"],
-    empresa: "Porto"
-
+    icon: [
+      "icon-react",
+      "icon-scrum",
+      "icon-jest",
+      "icon-javascript",
+      "icon-git",
+      "icon-nodejs",
+      "icon-jira",
+      "icon-figma",
+      "icon-aem",
+      "icon-bitbucket",
+      "icon-styled-components",
+    ],
+    empresa: "Porto",
   },
   {
-    title: "",
-    description: "Desenvolvimento da seção de carrinho e checkout.",
+    title: "Site institucional",
+    description:
+      "Criação de um novo site institucional Edge, destacando-se pela inovação e modernidade em design.",
     src: "edge.svg",
     link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
     color: "#808080",
-    icon: [ "icon-next-js", "icon-react", "icon-scrum", "icon-jest", "icon-less"],
-    empresa: "Edge"
+    icon: [
+      "icon-react",
+      "icon-scrum",
+      "icon-javascript",
+      "icon-figma",
+      "icon-git",
+      "icon-nodejs",
+      "icon-jira",
+      "icon-aem",
+      "icon-bitbucket",
+      "icon-styled-components",
+    ],
+
+    empresa: "Edge",
   },
   {
-    title: "Projeto",
-    description: "Melhorias na seção de listagem de produtos.",
+    title: "Listagem de produtos",
+    description:
+      "Aprimoramento da seção de listagem de produtos, visando usabilidade, a estética e a eficiência, proporcionando uma experiência mais agradável e intuitiva aos usuários durante a navegação.",
     src: "converse.svg",
     link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
     color: "#808080",
-    icon: [ "icon-next-js", "icon-react", "icon-scrum", "icon-jest", "icon-less"],
-    empresa: "Converse"
+    icon: [
+      "icon-scrum",
+      "icon-php",
+      "icon-less",
+      "icon-javascript",
+      "icon-figma",
+      "icon-git",
+      "icon-jira",
+      "icon-adobe-comm",
+      "icon-bitbucket",
+    ],
+
+    empresa: "Converse",
   },
-]
+];
