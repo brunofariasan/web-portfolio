@@ -93,13 +93,13 @@ const resources = {
       softwareDeveloper: "Desenvolvedor de Software —",
       selectedProjects: "PROJETOS SELECIONADOS",
       overThePast:
-        "Nos últimos anos, na qualidade de desenvolvedor front-end, tenho trabalhado com grandes parceiros da Compass.uol com o " +
+        "Nos últimos anos, na qualidade de Desenvolvedor Front-end, tenho trabalhado com grandes parceiros da Compass.uol com o " +
         "objetivo de auxiliá-los a alcançar seu pleno potencial e atrair novos clientes.",
       topProjects: "Principais projetos —",
       myName:
       "Meu nome é Bruno Faria, possuo graduação em Sistemas de Informação e atualmente ocupo a posição " +
-      "de desenvolvedor Front-End na Compass.uol. Movido por uma paixão pela tecnologia, busco traduzir " +
-      "ideias que simplificam o dia a dia das pessoas por meio de código, aprimorando incessantemente minhas " +
+      "de Front-End Dev na Compass.uol. Movido por uma paixão pela tecnologia, busco traduzir " +
+      "ideias que simplificam o dia a dia das pessoas por meio do código, aprimorando incessantemente minhas " +
       "skills no desenvolvimento Front-End. Tenho um apreço pelas metodologias ágeis, acreditando que a " +
       "colaboração efetiva e a entrega contínua são elementos fundamentais para o grande sucesso de projetos.",
       someWords: "ALGUMAS PALAVRAS SOBRE MIM",

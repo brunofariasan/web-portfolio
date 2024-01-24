@@ -37,7 +37,9 @@ type TextVariants =
   | "text-tech-slide"
   | "main-text-to-skill"
   | "main-text-to-slide"
-  | "language-text";
+  | "language-text"
+  | "card-title"
+  | "card-description-slide"
 
 type TextComponent =
   | "span"

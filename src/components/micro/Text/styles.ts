@@ -84,9 +84,9 @@ const textVariants = {
 
   "text-footer": css`
     color: ${({ theme }) => theme.colors.white};
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 100;
     line-height: 1.9rem;
     letter-spacing: 0.11rem;
     font-family: "Montserrat", sans-serif;
@@ -118,7 +118,7 @@ const textVariants = {
     }
 
     @media (max-width: 750px) {
-      font-size: 1.8rem;
+      //font-size: 1.8rem;
     }
   `,
 
@@ -382,7 +382,6 @@ const textVariants = {
     font-style: normal;
     font-weight: 900;
     letter-spacing: 2.4px;
-
     color: #878a8f;
     transition: background-color 0.3s ease;
 
@@ -483,6 +482,22 @@ const textVariants = {
     &:hover {
       color: #ffb800;
     }
+  `,
+
+  "card-title": css`
+    font-family: Montserrat;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 2.5rem;
+    letter-spacing: 2px;
+  `,
+
+  "card-description-slide": css`
+    text-align: start;
+    font-family: inter;
+    font-size: 1.6rem;
+    font-weight: 500;
   `,
 };
 

@@ -3,7 +3,7 @@ import Icon from "../micro/Icon";
 import Image from "../micro/Image";
 import Text from "../micro/Text";
 import { listIcons } from "./mockData";
-import Ai from "../../assets/Badge-Ai.svg";
+import Ai from "../../assets/images/Badge.svg";
 import { useTranslation } from "react-i18next";
 
 export default function Skills({ icon }: any) {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "@/styles/theme";
 
 export const Container = styled.div`
-  min-height: 43rem;
+  min-height: 35rem;
   background-color: ${theme.colors.darkCharcoal};
   padding-left: clamp(0.1rem, 1.8rem + 2.9vw, 34.2rem);
   padding-right: clamp(0.1rem, 1.8rem + 2.9vw, 34.2rem);
@@ -18,7 +18,7 @@ export const TitleSection = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 3rem;
-  padding: 90px 0 0px;
+  padding: 5rem 0 0px;
 
   @media (max-width: 1200px) {
     padding-left: clamp(0.1rem, 0.8rem + 8.9vw, 36.2rem);
