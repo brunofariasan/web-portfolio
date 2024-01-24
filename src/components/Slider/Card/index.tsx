@@ -1,9 +1,8 @@
 "use client";
+import React from "react";
 import styles from "./style.module.scss";
 import { useTransform, useScroll, motion } from "framer-motion";
 import { useRef } from "react";
-import React from "react";
-import * as S from "./styles";
 import Text from "@/components/micro/Text";
 import Icon from "@/components/micro/Icon";
 import Image from "@/components/micro/Image";
@@ -11,6 +10,7 @@ import Flex from "@/components/micro/Flex";
 import useWindowSize from "@/hooks/useWindowSize";
 import { useTranslation } from "react-i18next";
 
+import * as S from "./styles";
 const Card = ({
   i,
   title,
@@ -42,7 +42,6 @@ const Card = ({
           {t("topProjects")}
         </Text>
       )}
-
       <motion.div
         style={{
           backgroundColor: color,
@@ -52,11 +51,11 @@ const Card = ({
         className={styles.card}
       >
         <Flex flexDirection="column" gap="2rem">
-          <S.H2>{title}</S.H2>
-          <S.H4>{description}</S.H4>
+          <Text variant="card-title">{title}</Text>
+          <Text variant="card-description-slide">{description}</Text>
         </Flex>
-        <S.Body>
-          <S.Div2>
+        <S.Section>
+          <S.FlexSection>
             <Text variant="text-tech-slide">Tecnologias</Text>
             <S.Div>
               {icon.map((proj: any, i: any) => (
@@ -68,7 +67,7 @@ const Card = ({
                 />
               ))}
             </S.Div>
-          </S.Div2>
+          </S.FlexSection>
           <S.ImageContainer>
             <motion.div
               style={{
@@ -83,11 +82,8 @@ const Card = ({
               </S.Inner>
             </motion.div>
           </S.ImageContainer>
-        </S.Body>
+        </S.Section>
       </motion.div>
-      {/* <Text variant="section-watermark-white" component="h1">
-        WORK
-      </Text> */}
     </S.Container>
   );
 };

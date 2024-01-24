@@ -7,26 +7,26 @@ export const mockItems = [
   {
     date: "2023",
     new: "NOVO",
-    description: "Desenvolvimento de portal adminstrador para geração de cupom",
+    description: "Desenvolvimento de portal adminstrativo para criação de cupons",
     logo: LogoLivelo,
   },
   {
     date: "2023",
     new: null,
-    description: "Desenvolvimento checkout e carrinho",
+    description: "Desenvolvimento de sistema de carrinho de compras e checkout",
     logo: LogoPorto,
 
   },
   {
     date: "2022",
     new: null,
-    description: "Desenvolvimento da seção de carrinho e checkout",
+    description: "Criação de um novo site institucional Edge",
     logo: LogoEdge,
   },
   {
     date: "2022",
     new: null,
-    description: "Melhorias na seção de listagem de produtos",
+    description: "Aprimoramento da seção de listagem de produtos",
     logo: LogoConverse,
 
   },

@@ -1,6 +1,12 @@
-import { theme } from "@/styles/theme";
-import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
+
+export const Container = styled.div``;
+
+export const Section = styled.div`
+  color: ${({ theme }) => theme.colors.black};
+  background-color: rgba(0, 0, 0, 0.7);
+`;
 
 export const Main = styled.main`
   padding: 6rem;
@@ -8,18 +14,12 @@ export const Main = styled.main`
   @media (max-width: 750px) {
     padding: 0rem 2rem 0rem 2rem;
   }
-
 `;
 
-export const Div = styled.div`
-  color: black;
-  background-color: rgba(0, 0, 0, 0.7);
-`;
-
-export const StyledDiv = styled(motion.div)`
+export const ProgressIndicator = styled(motion.div)`
   width: 3px;
   height: 80%;
-  background: #ffffff;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 4px;
   position: fixed;
   top: 0;

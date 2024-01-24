@@ -32,7 +32,7 @@ export default function Footer() {
           <Text variant="title-footer">
             {t("latest")} {br} {t("projectsText")}{" "}
           </Text>
-          <Flex gap="0.6rem" flexDirection="column">
+          <Flex gap="1rem" flexDirection="column">
             {mockItems.map((item, index) => (
               <Link href={item.url} key={index}>
                 <Text variant="text-footer">{t(item.name)}</Text>
@@ -44,7 +44,7 @@ export default function Footer() {
           <Text variant="title-footer">
             {t("follow")} {br} {t("me")}{" "}
           </Text>
-          <Flex gap="0.6rem" flexDirection="column">
+          <Flex gap="1rem" flexDirection="column">
             {mockRedes.map((item, index) => (
               <Link href={item.url} key={index}>
                 <Text variant="text-footer">{item.name}</Text>
@@ -59,9 +59,9 @@ export default function Footer() {
           </Link>
         </Flex>
       </S.TitleSection>
-      <Flex flexDirection="column">
+      <Flex flexDirection="column" pb="1.3rem">
+        <Line color={theme.colors.deepCharcoalBlue} />
         <Copyright color={theme.colors.light10} />
-        <Line color={theme.colors.light10} />
       </Flex>
     </S.Container>
   );

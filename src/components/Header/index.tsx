@@ -10,8 +10,8 @@ import useWindowSize from "@/hooks/useWindowSize";
 import { HeaderProps } from "./types";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
-import usa from "../../assets/eua.svg";
-import br from "../../assets/br.svg";
+import usa from "../../assets/images/eua.svg";
+import br from "../../assets/images/br.svg";
 import { changeLanguage } from "i18next";
 
 const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
