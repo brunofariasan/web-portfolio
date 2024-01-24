@@ -105,7 +105,6 @@ export const Body = styled.div`
     flex-direction: column;
    gap: 0rem;
     margin-top: 1.5rem;
-   // min-height: auto;
   }
 `;
 

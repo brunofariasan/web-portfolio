@@ -16,7 +16,7 @@ const Image: FC<ImageProps> = ({
   width = "auto",
   opacity,
 }) => {
-  return <img src={src} alt={alt} style={{ height, width, opacity}} />;
+  return <img src={src} alt={alt} style={{ height, width, opacity }} />;
 };
 
 Image.propTypes = propTypes;

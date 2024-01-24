@@ -33,6 +33,14 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [menuOpen]);
+
   const { t, i18n } = useTranslation();
   const i18nRef = React.useRef(i18n);
   const [curentLanguage, setCurentLanguage] = useState(i18n.language); // Use i18n.language directly
@@ -66,7 +74,6 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
             onClick={() => setMenuOpen(!menuOpen)}
             className={menuOpen ? "active" : ""}
           >
-            {/* <Text variant="text-menu-logo">MENU</Text> */}
             <Icon
               iconName="icon-menu"
               size={width < 700 ? "large" : "big"}
@@ -129,29 +136,29 @@ const Header = ({ dynamicHeader, informationColor = "white" }: HeaderProps) => {
             ))}
           </S.Section>
           <S.Li>
-          {width <= 750 && (
-            <S.LanguageSelectionSession onClick={handleButtonClick}>
-              <S.IdiomaName>
-                <S.Idioma>{curentLanguage}</S.Idioma>
-              </S.IdiomaName>
-              {showDiv && (
-                <S.SectionButton onClick={handleLanguage}>
-                  <S.Idioma>
-                    {curentLanguage === "pt"
-                      ? t("english") + " - "
-                      : t("portuguese") + " - "}
-                  </S.Idioma>
-                  <S.Button>
-                    {curentLanguage === "en" ? (
-                      <img src={br.src} />
-                    ) : (
-                      <img src={usa.src} />
-                    )}
-                  </S.Button>
-                </S.SectionButton>
-              )}
-            </S.LanguageSelectionSession>
-          )}
+            {width <= 750 && (
+              <S.LanguageSelectionSession onClick={handleButtonClick}>
+                <S.IdiomaName>
+                  <Text variant="language-text">{curentLanguage}</Text>
+                </S.IdiomaName>
+                {showDiv && (
+                  <S.SectionButton onClick={handleLanguage}>
+                    <Text variant="language-text">
+                      {curentLanguage === "pt"
+                        ? t("english") + " - "
+                        : t("portuguese") + " - "}
+                    </Text>
+                    <S.Button>
+                      {curentLanguage === "en" ? (
+                        <img src={br.src} />
+                      ) : (
+                        <img src={usa.src} />
+                      )}
+                    </S.Button>
+                  </S.SectionButton>
+                )}
+              </S.LanguageSelectionSession>
+            )}
           </S.Li>
         </Flex>
         <Copyright />

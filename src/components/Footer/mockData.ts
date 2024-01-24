@@ -6,7 +6,7 @@ export const mockItems = [
 ];
 
 export const mockRedes = [
-  { name: "Instagram", url: "projects" },
-  { name: "Linkedin", url: "projects" },
-  { name: "WhatsApp", url: "projects" },
+  { name: "Instagram", url: "https://www.instagram.com/brunos.faria/" },
+  { name: "Linkedin", url: "https://www.linkedin.com/in/bruno-santos-faria-66673411a/" },
+  { name: "WhatsApp", url: "https://wa.me/55037998375432" },
 ];

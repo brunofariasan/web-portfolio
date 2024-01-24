@@ -22,7 +22,7 @@ export const MapSection = styled.div`
   top: 20rem;
   overflow: hidden;
   right: 43.6rem;
-  margin-top: 42px;
+  margin-top: 4.2rem;
   box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
 
   @media (max-width: 1245px) {

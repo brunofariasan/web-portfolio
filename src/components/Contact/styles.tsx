@@ -4,10 +4,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   min-height: 54.6rem;
   background: rgba(0, 0, 0, 0.98);
-
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Section = styled.div`
@@ -52,27 +51,28 @@ export const Label = styled.label`
 export const Input = styled.input`
   font-family: Montserrat;
   font-size: 1.4rem;
-  color:${theme.colors.white};
+  color: ${theme.colors.white};
   font-weight: 500;
   border: none;
-  border-bottom: 0.1rem solid white; /*  linha branca */
+  border-bottom: 0.1rem solid white;
   margin-bottom: 2rem;
   padding: 1rem;
   font-size: 1.6rem;
-  background-color: rgba(0, 0, 0, 0); /*  fundo preto */
-  color: ${theme.colors.white}; /*  texto em branco */
-  transition: border-bottom 0.3s ease-in-out; /* adicionando transição */
+  background-color: rgba(0, 0, 0, 0);
+  color: ${theme.colors.white};
+  transition: border-bottom 0.3s ease-in-out;
   outline: none;
+  
   &:focus {
     border-bottom: 0.2rem solid #292929;
   }
 
   &::placeholder {
-    color: ${theme.colors.white}; /* branco claro para o placeholder */
+    color: ${theme.colors.white}; 
   }
 
   &:focus::placeholder {
-    color: rgba(255, 255, 255, 0.8); /*  quando o input está focado */
+    color: rgba(255, 255, 255, 0.8); 
   }
 `;
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div``;
 
@@ -47,23 +47,24 @@ export const FlexVideo = styled.div`
 // `;
 
 // export const ScrollDownAnimation = styled.div<{ visible: boolean }>`
-//   position: absolute;
-//   bottom: 120px;
+//   //position: absolute;
+//   bottom: 200px;
 //   left: 50%;
 //   transform: translateX(-50%);
-//   font-size: 18px;
+//   font-size: 15px;
 //   opacity: ${(props) => (props.visible ? 1 : 0)};
 //   transition: opacity 0.3s ease;
-//   pointer-events: ${(props) => (props.visible ? 'auto' : 'none')};
+//   pointer-events: ${(props) => (props.visible ? "auto" : "none")};
 //   animation: ${bounce} 2s infinite;
 //   color: white;
+//   font-family: inter;
 // `;
 
 // export const ArrowIcon = styled.span`
 //   display: block;
 //   width: 20px;
 //   height: 20px;
-//   border: solid #fff;
+//   border: solid #bdbdbd;
 //   border-width: 0 3px 3px 0;
 //   transform: rotate(45deg);
 //   margin: 0 auto;

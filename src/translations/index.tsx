@@ -24,15 +24,17 @@ const resources = {
       close: "Close",
       //projects
       softwareDeveloper: "Software developer —",
+      selectedProjects: "SELECTED PROJECTS",
       overThePast:
         "Over the past years, as a front-end developer, I have worked with major partners of Compass.uol" +
         "to help them realize their full potential and attract new clients.",
       topProjects: "Top projects —",
       myName:
-        " My name is Bruno Faria, a graduate in Information Systems, and I currently work as a Front-End developer" +
-        "at Compass.uol. Passionate about technology, I strive to translate ideas that simplify people's everyday" +
-        "lives into code, constantly honing my skills in Front-End development. Moreover, I have a keen interest in" +
-        "agile methodologies, believing that effective collaboration and continuous delivery are crucial for project success.",
+        " Hi there! I'm Bruno Faria, and I graduated in Information Systems. Currently, I work as a Front-End developer " +
+        "at Compass.uol. Driven by a passion for technology, I aim to translate ideas into code that simplifies people's " +
+        "daily lives, constantly improving my Front-End development skills. I appreciate agile methodologies, believing " +
+        "that effective collaboration and continuous delivery are essential elements for the success of projects.",
+      someWords: "SOME WORDS ABOUT ME",
       //contact
       contactTitle: "CONTACT",
       lets: "Let's",
@@ -58,6 +60,8 @@ const resources = {
       follow: "Follow",
       me: "me on —",
       allProjects: "All projects",
+      //skill
+      topSkills: "Top skills —",
     },
   },
   pt: {
@@ -76,8 +80,8 @@ const resources = {
       niceToMeet:
         "Oi. Eu sou o Bruno, prazer em conhecê-lo. Por favor, dê uma olhada ao redor!",
       excellentSoftware:
-        "Sou apaixonado por desenvolver software excelente que melhora a vida das pessoas ao meu redor." +
-        "Tenho experiência em criar software para os principais clientes da Compass.uol. E se você tivesse um" +
+        "Sou apaixonado por desenvolver aplicações que facilitem a vida das pessoas ao meu redor. " +
+        "Tenho experiência em criar software para os principais clientes da Compass.uol. E se você tivesse um " +
         "especialista em software disponível ao alcance dos seus dedos?",
       //header/menu
       projects: "Projetos",
@@ -87,15 +91,18 @@ const resources = {
       close: "Fechar",
       //projects
       softwareDeveloper: "Desenvolvedor de Software —",
+      selectedProjects: "PROJETOS SELECIONADOS",
       overThePast:
-        "Nos últimos anos, na qualidade de desenvolvedor front-end, tenho trabalhado com grandes parceiros da Compass.uol com o" +
+        "Nos últimos anos, na qualidade de desenvolvedor front-end, tenho trabalhado com grandes parceiros da Compass.uol com o " +
         "objetivo de auxiliá-los a alcançar seu pleno potencial e atrair novos clientes.",
       topProjects: "Principais projetos —",
       myName:
-        "Meu nome é Bruno Faria, graduado em Sistemas de Informação e atualmente atuo como Front-End dev na Compass.uol." +
-        " Apaixonado por tecnologia, busco traduzir ideias que simplificam o cotidiano das pessoas em código, constantemente aprimorando " +
-        "minhas habilidades no desenvolvimento Front-End. Além disso, tenho um profundo interesse em metodologias ágeis, acreditando que a" +
-        "colaboração efetiva e a entrega contínua são fundamentais para o sucesso dos projetos.",
+      "Meu nome é Bruno Faria, possuo graduação em Sistemas de Informação e atualmente ocupo a posição " +
+      "de desenvolvedor Front-End na Compass.uol. Movido por uma paixão pela tecnologia, busco traduzir " +
+      "ideias que simplificam o dia a dia das pessoas por meio de código, aprimorando incessantemente minhas " +
+      "skills no desenvolvimento Front-End. Tenho um apreço pelas metodologias ágeis, acreditando que a " +
+      "colaboração efetiva e a entrega contínua são elementos fundamentais para o grande sucesso de projetos.",
+      someWords: "ALGUMAS PALAVRAS SOBRE MIM",
 
       //contact
       contactTitle: "CONTATO",
@@ -120,6 +127,8 @@ const resources = {
       follow: "Siga-me —",
       me: "",
       allProjects: "Todos os projetos",
+      //skills
+      topSkills: "Principais skills —",
     },
   },
 };

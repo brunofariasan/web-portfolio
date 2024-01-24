@@ -102,7 +102,6 @@ const textVariants = {
       color: #d9d9d9;
     }
 
-    /* Adiciona a linha com efeito de preenchimento automático */
     &:before {
       content: "";
       position: absolute;
@@ -196,29 +195,24 @@ const textVariants = {
     font-weight: 900;
     line-height: clamp(0.1rem, 1.8rem + 2.9vw, 4.5rem);
     letter-spacing: 0.3rem;
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
     opacity: 0.6;
     text-align: center;
     padding-top: 11rem;
-    //padding-bottom: 5rem;
     position: absolute;
     z-index: 15;
     top: 0rem;
 
     @media (max-width: 750px) {
       padding-top: 7rem;
-  
       font-size: clamp(0.1rem, 1.8rem + 2.9vw, 2.8rem);
-    letter-spacing: 0rem;
-    padding-bottom: 2rem;
+      letter-spacing: 0rem;
+      padding-bottom: 2rem;
+    }
 
-  }
-
-  @media (max-height: 640px) {
-      //top: 5.5rem;
+    @media (max-height: 640px) {
       font-size: clamp(0.1rem, 1.8rem + 2.9vw, 2.5rem);
-      
-  }
+    }
   `,
 
   "final-text-about-me": css`
@@ -292,7 +286,6 @@ const textVariants = {
     font-weight: 700;
     line-height: 3.4rem;
     letter-spacing: 4.32px;
-    //max-width: 45.8rem;
 
     @media (max-width: 50rem) {
       max-width: 100%;
@@ -439,7 +432,6 @@ const textVariants = {
     font-weight: 900;
     line-height: 2.5rem;
     letter-spacing: 2px;
-
     font-family: "Montserrat";
   `,
 
@@ -459,7 +451,6 @@ const textVariants = {
     font-style: normal;
     font-weight: 700;
     line-height: clamp(0.1rem, 1.8rem + 2.9vw, 5rem);
-    // letter-spacing: 0.6rem;
     padding-top: 5rem;
   `,
 
@@ -474,6 +465,24 @@ const textVariants = {
     max-width: 31.1rem;
     position: relative;
     transition: color 0.3s ease;
+  `,
+
+  "language-text": css`
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    color: ${({ theme }) => theme.colors.white};
+    text-align: center;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 2.5rem;
+    letter-spacing: 2px;
+    font-family: "Montserrat";
+
+    &:hover {
+      color: #ffb800;
+    }
   `,
 };
 
