@@ -22,7 +22,7 @@ type TextVariants =
   | "project-title"
   | "project-text"
   | "title-on-top-of-map"
-  |"title-section-contact"
+  | "title-section-contact"
   | "contact-section-title-description"
   | "description-contact"
   | "section-watermark-white" // texto marca d'agua da seção
@@ -30,23 +30,14 @@ type TextVariants =
   | "text-menu" //texto do menu
   | "bruno-faria-log" //texto do menu
   | "text-menu-logo"
-  |"text-language"
+  | "text-language"
   | "title-section-slider" //titulo grande da seção de slider
   | "title-section-card" //titulo grande da seção de slider
   | "main-text-projects"
   | "text-tech-slide"
   | "main-text-to-skill"
   | "main-text-to-slide"
-
-// | "text-partner"; // texto de parceiro
-// | "title-section-description" //texto pequeno encima do titulo da seção
-// | "text-menu" //text MENU
-// | "text-close" //text CLOSE
-// | "text-name-menu" //texto do menu
-// | "title-section" //titulo grande da seção
-// | "text-over-title" // texto sobre o titulo da seção
-// | "text-data" // texto da data
-// | "text-new" // texto novo
+  | "language-text";
 
 type TextComponent =
   | "span"

@@ -5,28 +5,28 @@ export const Container = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  margin: 0px auto;
+  margin: 0rem auto;
   align-items: center;
   background: rgba(0, 0, 0, 0.7);
   left: 0;
   top: 0;
   justify-content: center;
   z-index: 1000;
-  
+
   .lds-ring {
     display: inline-block;
     position: relative;
-    width: 64px;
-    height: 64px;
+    width: 6.4rem;
+    height: 6.4rem;
   }
   .lds-ring div {
     box-sizing: border-box;
     display: block;
     position: absolute;
-    width: 51px;
-    height: 51px;
-    margin: 6px;
-    border: 6px solid #cef;
+    width: 5.1rem;
+    height: 5.1rem;
+    margin: 0.6rem;
+    border: 0.6rem solid #cef;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: #cef transparent transparent transparent;

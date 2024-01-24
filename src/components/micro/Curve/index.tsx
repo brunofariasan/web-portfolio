@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { text, curve, translate } from "./anim";
 import { useTranslation } from "react-i18next";
+
 interface Dimensions {
   width: number | null;
   height: number | null;
 }
+
 interface RouteMap {
   [key: string]: string;
   "/": string;
@@ -39,7 +41,8 @@ export default function Curve({ children, backgroundColor }: any) {
     width: null,
     height: null,
   });
-  const te = routes[router.route];
+
+  const routeName = routes[router.route];
 
   useEffect(() => {
     function resize() {
@@ -62,7 +65,7 @@ export default function Curve({ children, backgroundColor }: any) {
         className="background"
       />
       <motion.p className="route" {...anim(text)}>
-        {t(te)}
+        {t(routeName)}
       </motion.p>
       {dimensions.width != null && <SVG {...dimensions} />}
       {children}
@@ -72,20 +75,20 @@ export default function Curve({ children, backgroundColor }: any) {
 
 const SVG = ({ height, width }: any) => {
   const initialPath = `
-        M0 300 
-        Q${width / 2} 0 ${width} 300
-        L${width} ${height + 300}
-        Q${width / 2} ${height + 600} 0 ${height + 300}
-        L0 0
-    `;
+    M0 300 
+    Q${width / 2} 0 ${width} 300
+    L${width} ${height + 300}
+    Q${width / 2} ${height + 600} 0 ${height + 300}
+    L0 0
+  `;
 
   const targetPath = `
-        M0 300
-        Q${width / 2} 0 ${width} 300
-        L${width} ${height}
-        Q${width / 2} ${height} 0 ${height}
-        L0 0
-    `;
+    M0 300
+    Q${width / 2} 0 ${width} 300
+    L${width} ${height}
+    Q${width / 2} ${height} 0 ${height}
+    L0 0
+  `;
 
   return (
     <motion.svg {...anim(translate)}>

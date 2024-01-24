@@ -9,7 +9,7 @@ export default function SummaryAbout() {
   return (
     <S.Container>
       <Text variant="section-watermark" component="h1">
-        Developer
+      {TEXT.TEXT_DEVELOPER}
       </Text>
       <S.TextSection>
         <Text variant="title-logo">{TEXT.NAME_LOGO}</Text>

@@ -1,8 +1,7 @@
+import * as S from "./styles";
 import { useState } from "react";
 import Flex from "../micro/Flex";
 import Text from "../micro/Text";
-import { TEXT } from "./constants";
-import * as S from "./styles";
 import emailjs from "@emailjs/browser";
 import Spinner from "../micro/Spinner/Spinner";
 import { useTranslation } from "react-i18next";

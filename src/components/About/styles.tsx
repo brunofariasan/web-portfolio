@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "@/styles/theme";
 
 export const Container = styled.div`
-  min-height: 546px;
+  min-height: 5.46rem;
   background-color: ${theme.colors.light10};
 `;
 

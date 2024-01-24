@@ -5,6 +5,8 @@ import * as S from "./styles";
 import Text from "../micro/Text";
 import Flex from "../micro/Flex";
 import { TEXT } from "./constants";
+import Spinner from "../micro/Spinner/Spinner";
+import { useTranslation } from "react-i18next";
 
 interface CenterType {
   lat: number;
@@ -12,6 +14,7 @@ interface CenterType {
 }
 
 export function Map() {
+  const { t } = useTranslation();
   const [center, setCenter] = useState<CenterType | null>(null);
 
   useEffect(() => {
@@ -85,24 +88,28 @@ export function Map() {
     visibility: "off",
   };
 
-  return isLoaded && center ? (
+  return (
     <S.Container>
       <S.Watermark>
         <Text variant="section-watermark-white" component="h1">
-          {TEXT.TEXT_WATERMARK}
+          {t("contact")}
         </Text>
       </S.Watermark>
       <S.MapSection>
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={7}
-          options={options}
-        />
+        {isLoaded && center ? (
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={7}
+            options={options}
+          />
+        ) : (
+          <Spinner />
+        )}
       </S.MapSection>
       <S.Section>
         <S.TextSection>
-        <Flex justify="space-around">
+          <Flex justify="space-around">
             <S.I>
               <Text variant="title-on-top-of-map" component="h1">
                 W
@@ -172,7 +179,5 @@ export function Map() {
         </S.TextSection>
       </S.Section>
     </S.Container>
-  ) : (
-    <div>Loading...</div>
   );
 }

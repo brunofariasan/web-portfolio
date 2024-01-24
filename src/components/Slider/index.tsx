@@ -43,10 +43,6 @@ export const Slide: React.FC = ({}) => {
         }}
       />
       <S.Div>
-        {/* <Text variant="section-watermark" component="h1">
-          Projetos alocados
-        </Text> */}
-        {/* <Text variant="main-text-to-slide" color="black">Principais projetos  —</Text> */}
         <S.Main ref={container}>
           {projects.map((project, i) => {
             const targetScale = 1 - (projects.length - i) * 0.05;

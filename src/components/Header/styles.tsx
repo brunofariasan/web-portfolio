@@ -16,8 +16,8 @@ export const HeaderWrapper = styled.header<{ scrolled: boolean }>`
   transition: 0.6s;
   opacity: 10;
   pointer-events: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  transform: translateY(0px);
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(0rem);
 
   @media (max-width: 750px) {
     padding: 1rem 2rem;
@@ -25,11 +25,72 @@ export const HeaderWrapper = styled.header<{ scrolled: boolean }>`
   }
 `;
 
+export const Div = styled.div`
+  display: flex;
+  font-family: Poppins;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  align-items: center;
+`;
+
 export const MenuIcon = styled.div`
   cursor: pointer;
   display: flex;
   gap: 1rem;
   align-items: center;
+`;
+
+export const Li = styled.li`
+  display: flex;
+  align-items: center;
+`;
+
+export const LanguageSelectionSession = styled.div`
+  width: 8rem;
+  height: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media (max-width: 750px) {
+    height: 2.5rem;
+  }
+`;
+
+export const IdiomaName = styled.div`
+  cursor: pointer;
+  background-color: transparent;
+`;
+
+export const SectionButton = styled.div`
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 4.8rem;
+  gap: 0.5rem;
+  img {
+    border-radius: 20%;
+  }
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  background-color: transparent;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+
+  @media (max-width: 750px) {
+    justify-content: center;
+  }
 `;
 
 export const Menu = styled.div<{ isOpen: boolean }>`
@@ -60,7 +121,7 @@ export const CloseButton = styled.button`
 export const Section = styled.ul``;
 
 export const TextNameMenu = styled.li<{ isActive: boolean }>`
- margin: 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   font-family: Montserrat;
@@ -73,129 +134,4 @@ export const TextNameMenu = styled.li<{ isActive: boolean }>`
   &:hover {
     color: #f2f2f2;
   }
-`;
-
-export const Div = styled.div`
-  display: flex;
-  //gap: 1.5rem;
-  font-family: Poppins;
-  text-transform: uppercase;
-  font-size: 18px;
-  align-items: center;
-`;
-
-export const Button = styled.button`
-  width: 100%;
-  background-color: transparent;
-
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: none;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-
-  @media (max-width: 750px) {
-    //min-width: 100%;
-    justify-content: center;
-  }
-`;
-
-export const Navbar = styled.div`
-  @media (max-width: 900px) {
-    Nav {
-      display: none;
-    }
-  }
-`;
-
-export const Nav = styled.nav`
-  Ul {
-    display: flex;
-  }
-`;
-
-export const Ul = styled.ul`
-  A:hover {
-    border-bottom: 2px solid yellow;
-  }
-`;
-
-export const Li = styled.li`
-  //height: 1rem;
-  //width: 105px;
-  display: flex;
-  align-items: center;
-
-  @media (max-width: 750px) {
-    /* min-width: 100%;
-    justify-content: center; */
-  }
-`;
-
-export const LanguageSelectionSession = styled.div`
-  width: 80px;
-  height: 65px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-
-  @media (max-width: 750px) {
-    height: 25px;
-
-  }
-`;
-
-export const IdiomaName = styled.div`
-  cursor: pointer;
-  background-color: transparent;
-`;
-
-export const Idioma = styled.p`
-  color: white;
-  text-transform: uppercase;
-  white-space: nowrap;
-  cursor: pointer;
-  color: #FFFFFF;
-    text-align: center;
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 2.5rem;
-    letter-spacing: 2px;
-    font-family: 'Montserrat';
-
-  &:hover {
-    color: #ffb800;
-  }
-`;
-
-export const SectionButton = styled.div`
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 48px;
-  gap: 5px;
-  img {
-    border-radius: 20%;
-  }
-
-  @media (max-width: 750px) {
-    //mobile
-   
-  }
-`;
-
-export const A = styled.a`
-  color: black;
-  font-size: 16px;
-  display: inline-block;
-  text-decoration: none;
-  transition: background 0.4s;
-  text-transform: uppercase;
-  cursor: pointer;
 `;

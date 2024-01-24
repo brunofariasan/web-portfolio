@@ -11,7 +11,7 @@ const Text = ({
   informationColor = "white",
   component = "p",
   link,
-  headerColor, 
+  headerColor,
   children,
   ...rest
 }: TextProps) => {

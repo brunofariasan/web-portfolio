@@ -18,19 +18,21 @@ export default function Footer() {
     <S.Container>
       <S.TitleSection>
         <S.FlexContainer>
-          <Flex flexDirection="column" gap="20px">
+          <Flex flexDirection="column" gap="2rem">
             <Text variant="title-footer">
               {t("footerContact")} {br} {t("information")}
             </Text>
             <Text variant="text-footer">{t("feelFree")}</Text>
-            <Text variant="text-footer">{TEXT.TEXT_EMAIL}</Text>
+            <Link href="contact">
+              <Text variant="text-footer">{TEXT.TEXT_EMAIL}</Text>
+            </Link>
           </Flex>
         </S.FlexContainer>
-        <Flex flexDirection="column" gap="20px">
+        <Flex flexDirection="column" gap="2rem">
           <Text variant="title-footer">
             {t("latest")} {br} {t("projectsText")}{" "}
           </Text>
-          <Flex gap="6px" flexDirection="column">
+          <Flex gap="0.6rem" flexDirection="column">
             {mockItems.map((item, index) => (
               <Link href={item.url} key={index}>
                 <Text variant="text-footer">{t(item.name)}</Text>
@@ -38,12 +40,11 @@ export default function Footer() {
             ))}
           </Flex>
         </Flex>
-
-        <Flex flexDirection="column" gap="20px">
+        <Flex flexDirection="column" gap="2rem">
           <Text variant="title-footer">
             {t("follow")} {br} {t("me")}{" "}
           </Text>
-          <Flex gap="6px" flexDirection="column">
+          <Flex gap="0.6rem" flexDirection="column">
             {mockRedes.map((item, index) => (
               <Link href={item.url} key={index}>
                 <Text variant="text-footer">{item.name}</Text>
@@ -51,9 +52,11 @@ export default function Footer() {
             ))}
           </Flex>
         </Flex>
-        <Flex flexDirection="column" gap="20px">
-          <Text variant="title-footer">{TEXT.TITLE_THREE}</Text>
-          <Text variant="text-footer">{TEXT.SKILLS}</Text>
+        <Flex flexDirection="column" gap="2rem">
+          <Text variant="title-footer">{TEXT.TITLE_SKILLS}</Text>
+          <Link href="about">
+            <Text variant="text-footer">{TEXT.SKILLS}</Text>
+          </Link>
         </Flex>
       </S.TitleSection>
       <Flex flexDirection="column">

@@ -9,7 +9,7 @@ import Icon from "@/components/micro/Icon";
 import Image from "@/components/micro/Image";
 import Flex from "@/components/micro/Flex";
 import useWindowSize from "@/hooks/useWindowSize";
-import { projects } from "../mockData";
+import { useTranslation } from "react-i18next";
 
 const Card = ({
   i,
@@ -23,6 +23,7 @@ const Card = ({
   targetScale,
   icon,
 }: any) => {
+  const { t } = useTranslation();
   const { width } = useWindowSize();
   const v = width <= 750;
   const container = useRef(null);
@@ -38,7 +39,7 @@ const Card = ({
     <S.Container ref={container} className={styles.cardContainer}>
       {icon.some((proj: any) => proj.includes("icon-0")) && (
         <Text variant="main-text-to-slide" color="black">
-          Principais projetos
+          {t("topProjects")}
         </Text>
       )}
 

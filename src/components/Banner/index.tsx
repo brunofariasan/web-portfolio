@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
 import * as S from "./styles";
+import React, { useState, useEffect } from "react";
 import Text from "@/components/micro/Text";
-import { TEXT } from "./constants";
 import { useTranslation } from "react-i18next";
 
 export default function Banner() {
@@ -72,11 +71,11 @@ export default function Banner() {
               {cursorVisible && "|"}
             </Text>
           </S.FlexVideo>
+          {/* <S.ScrollDownAnimation visible={scrollVisible}>
+            <S.ArrowIcon />
+            Scroll Down
+          </S.ScrollDownAnimation> */}
         </S.Content>
-        {/* <S.ScrollDownAnimation visible={scrollVisible}>
-          <S.ArrowIcon />
-          Scroll Down
-        </S.ScrollDownAnimation> */}
       </S.VideoContainer>
     </S.Container>
   );
