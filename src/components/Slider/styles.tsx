@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
 export const Main = styled.main`
-  padding: 0 6rem;
+  padding: 6rem;
 
-  @media (max-width: 500px) {
-    padding: 0 2rem;
+  @media (max-width: 750px) {
+    padding: 0rem 2rem 0rem 2rem;
   }
+
 `;
 
 export const Div = styled.div`

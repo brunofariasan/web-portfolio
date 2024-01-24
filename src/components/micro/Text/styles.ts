@@ -180,6 +180,47 @@ const textVariants = {
     max-width: 34rem;
   `,
 
+  "main-text-to-skill": css`
+    font-family: "Montserrat";
+    font-size: clamp(0.1rem, 1.8rem + 2.9vw, 4.8rem);
+    font-style: normal;
+    font-weight: 900;
+    line-height: clamp(0.1rem, 1.8rem + 2.9vw, 4.5rem);
+    letter-spacing: 0.3rem;
+  `,
+
+  "main-text-to-slide": css`
+    font-family: "Montserrat";
+    font-size: clamp(0.1rem, 1.8rem + 2.9vw, 4.8rem);
+    font-style: normal;
+    font-weight: 900;
+    line-height: clamp(0.1rem, 1.8rem + 2.9vw, 4.5rem);
+    letter-spacing: 0.3rem;
+    color: white;
+    opacity: 0.6;
+    text-align: center;
+    padding-top: 11rem;
+    //padding-bottom: 5rem;
+    position: absolute;
+    z-index: 15;
+    top: 0rem;
+
+    @media (max-width: 750px) {
+      padding-top: 7rem;
+  
+      font-size: clamp(0.1rem, 1.8rem + 2.9vw, 2.8rem);
+    letter-spacing: 0rem;
+    padding-bottom: 2rem;
+
+  }
+
+  @media (max-height: 640px) {
+      //top: 5.5rem;
+      font-size: clamp(0.1rem, 1.8rem + 2.9vw, 2.5rem);
+      
+  }
+  `,
+
   "final-text-about-me": css`
     font-family: "Inter";
     font-size: 2rem;
@@ -251,7 +292,7 @@ const textVariants = {
     font-weight: 700;
     line-height: 3.4rem;
     letter-spacing: 4.32px;
-    max-width: 45.8rem;
+    //max-width: 45.8rem;
 
     @media (max-width: 50rem) {
       max-width: 100%;

@@ -7,6 +7,7 @@ export const projects = [
     link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
     color: "#808080",
     icon: [
+      "icon-0",
       "icon-react",
       "icon-scrum",
       "icon-jest",

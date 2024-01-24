@@ -7,6 +7,7 @@ import Lenis from "@studio-freight/lenis";
 import Text from "@/components/micro/Text";
 import Card from "./Card";
 import { projects } from "./mockData";
+import { TEXT } from "../About/constants";
 
 export const Slide: React.FC = ({}) => {
   const container = useRef(null);
@@ -42,9 +43,10 @@ export const Slide: React.FC = ({}) => {
         }}
       />
       <S.Div>
-        <Text variant="section-watermark" component="h1">
+        {/* <Text variant="section-watermark" component="h1">
           Projetos alocados
-        </Text>
+        </Text> */}
+        {/* <Text variant="main-text-to-slide" color="black">Principais projetos  —</Text> */}
         <S.Main ref={container}>
           {projects.map((project, i) => {
             const targetScale = 1 - (projects.length - i) * 0.05;

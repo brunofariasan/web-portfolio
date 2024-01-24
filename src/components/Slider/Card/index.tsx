@@ -9,6 +9,7 @@ import Icon from "@/components/micro/Icon";
 import Image from "@/components/micro/Image";
 import Flex from "@/components/micro/Flex";
 import useWindowSize from "@/hooks/useWindowSize";
+import { projects } from "../mockData";
 
 const Card = ({
   i,
@@ -31,15 +32,16 @@ const Card = ({
   });
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
-  const imageOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.6, 0.8, 1],
-    [0, 0.2, 0.4, 0.6, 0.8, 1]
-  ); // Adjusted this line
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <S.Container ref={container} className={styles.cardContainer}>
+      {icon.some((proj: any) => proj.includes("icon-0")) && (
+        <Text variant="main-text-to-slide" color="black">
+          Principais projetos
+        </Text>
+      )}
+
       <motion.div
         style={{
           backgroundColor: color,
@@ -59,7 +61,7 @@ const Card = ({
               {icon.map((proj: any, i: any) => (
                 <Icon
                   iconName={proj}
-                  size={v ? "xhuge" : "xxhuge"}
+                  size={v ? "xxlarge" : "xxhuge"}
                   color="deepSlateBlue"
                   key={i}
                 />
@@ -82,9 +84,9 @@ const Card = ({
           </S.ImageContainer>
         </S.Body>
       </motion.div>
-      <Text variant="section-watermark-white" component="h1">
+      {/* <Text variant="section-watermark-white" component="h1">
         WORK
-      </Text>
+      </Text> */}
     </S.Container>
   );
 };
