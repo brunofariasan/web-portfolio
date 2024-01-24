@@ -45,8 +45,10 @@ export const Div = styled.div`
 export const TitleSection = styled.div`
   display: flex;
   padding: 7.2rem 2rem 5rem 2rem;
-  justify-content: space-between;
+  justify-content: center;
   gap: 5rem;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: 50rem) {
     flex-direction: column;
@@ -59,6 +61,7 @@ export const IconSection = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 2rem;
+  max-width: 85rem;
 
   @media (max-width: 50rem) {
     max-width: 100%;

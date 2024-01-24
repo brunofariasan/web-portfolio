@@ -2,17 +2,28 @@ import styled from "styled-components";
 import { theme } from "@/styles/theme";
 
 export const Container = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: sticky;
   top: 0px;
+  justify-content: flex-start;
+  padding-top: 27rem;
+  
   //*
-  mix-blend-mode: luminosity;
+  //mix-blend-mode: luminosity;
+
+  @media (max-width: 750px) {
+    padding-bottom: 0rem;
+    padding-top: 16rem;
+    //justify-content: flex-start;
+   
+  }
+  
 
   &:hover {
-    mix-blend-mode: normal;
+    //mix-blend-mode: normal;
   }
 
   .card {
@@ -66,9 +77,9 @@ export const Inner = styled.div`
   display: flex;
   justify-content: center;
   // padding-top: 4.6rem;
-  //opacity: 0.5;
+  opacity: 0.5;
   @media (max-width: 750px) {
-    margin-top: 2.2rem;
+    margin-top: 3rem;
   }
 `;
 export const ImageContainer = styled.div`
@@ -87,13 +98,14 @@ export const Body = styled.div`
   display: flex;
   margin-top: 5rem;
   gap: 5rem;
-  min-height: 230px;
+  min-height: 150px;
   justify-content: flex-end;
 
   @media (max-width: 750px) {
     flex-direction: column;
    gap: 0rem;
     margin-top: 1.5rem;
+   // min-height: auto;
   }
 `;
 
@@ -101,15 +113,15 @@ export const Div = styled.div`
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-
+  justify-content: center;
   border-right: 1px solid rgba(0, 0, 0, 0.7);
   padding-right: 5rem;
 
   @media (max-width: 750px) {
     padding-right: 0rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 3rem;
     gap: 1.2rem;
-    width: 100%;
+    width: 80%;
     justify-content: center;
     border-right: 0px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.7);
@@ -132,7 +144,7 @@ export const H2 = styled.h2`
   font-size: 2.8rem;
   font-style: normal;
   font-weight: 900;
-  line-height: 2rem;
+  line-height: 2.5rem;
   letter-spacing: 2px;
 `;
 

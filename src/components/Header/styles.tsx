@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.header<{ scrolled: boolean }>`
   width: 100%;
-  min-height: 6rem;
+  max-height: 7rem;
   position: fixed;
   top: 0;
   background-color: ${(props) => (props.scrolled ? "#333" : "transparent")};

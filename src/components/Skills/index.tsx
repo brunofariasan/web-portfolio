@@ -1,13 +1,15 @@
 import Flex from "../micro/Flex";
 import Icon from "../micro/Icon";
+import Image from "../micro/Image";
 import Text from "../micro/Text";
 import { TEXT } from "./constants";
+import { listIcons } from "./mockData";
 import * as S from "./styles";
-
-export default function Skills() {
+import Ai from "../../assets/Badge-Ai.svg";
+export default function Skills({ icon }: any) {
   return (
     <S.Container>
-      <S.TextSection>
+      {/* <S.TextSection>
         <Text variant="project-quantity" component="h1">
           15+
         </Text>
@@ -20,33 +22,29 @@ export default function Skills() {
             Nas horas vagas gosto de curtir uma boa musica e um filme
           </Text>
         </S.Div>
-      </S.TextSection>
+      </S.TextSection> */}
       <S.SkillSection>
-        <Text variant="section-watermark" component="h1">
+        {/* <Text variant="section-watermark" component="h1">
           {TEXT.MAIN_TITLE}
-        </Text>
+        </Text> */}
         <S.TitleSection>
-          <Text variant="text-main-technologies">
+        {/* <Text variant="main-text-projects">{t("topProjects")}</Text> */}
+          <Text variant="main-text-to-skill">
             {TEXT.TEXT_MAIN_TECHNOLOGIES}
           </Text>
-          <S.IconSection>
-            <Icon iconName="icon-react" size="xxxhuge" color="darkCharcoal" />
-            <Icon iconName="icon-scrum" size="xxxhuge" color="darkCharcoal" />
-            <Icon iconName="icon-next-js" size="xxxhuge" color="darkCharcoal" />
-            <Icon
-              iconName="icon-javascript"
-              size="xxxhuge"
-              color="darkCharcoal"
-            />
-            <Icon iconName="icon-git" size="xxxhuge" color="darkCharcoal" />
-            <Icon iconName="icon-jest" size="xxxhuge" color="darkCharcoal" />
-            <Icon iconName="icon-less" size="xxxhuge" color="darkCharcoal" />
-            <Icon
-              iconName="icon-bitbucket"
-              size="xxxhuge"
-              color="darkCharcoal"
-            />
-          </S.IconSection>
+          {listIcons.map((proj: any, i: any) => (
+            <S.IconSection key={i}>
+              {proj.icons.map((iconName: string, j: number) => (
+                <Icon
+                  iconName={iconName}
+                  size="xxxhuge"
+                  color="black"
+                  key={`${i}-${j}`}
+                />
+              ))}
+              <Image src={Ai.src} alt="Ai" width={50} />
+            </S.IconSection>
+          ))}
         </S.TitleSection>
       </S.SkillSection>
     </S.Container>

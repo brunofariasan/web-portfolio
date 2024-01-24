@@ -35,6 +35,8 @@ type TextVariants =
   | "title-section-card" //titulo grande da seção de slider
   | "main-text-projects"
   | "text-tech-slide"
+  | "main-text-to-skill"
+  | "main-text-to-slide"
 
 // | "text-partner"; // texto de parceiro
 // | "title-section-description" //texto pequeno encima do titulo da seção
