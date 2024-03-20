@@ -96,15 +96,13 @@ export function Map() {
         </Text>
       </S.Watermark>
       <S.MapSection>
-        {isLoaded && center ? (
+        {center && (
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
             zoom={7}
             options={options}
           />
-        ) : (
-          <Spinner />
         )}
       </S.MapSection>
       <S.Section>
