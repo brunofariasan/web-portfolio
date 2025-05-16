@@ -1,7 +1,7 @@
 export const mockItems = [
   { name: "Livelo", url: "projects" },
-  { name: "Porto Seguros", url: "projects" },
-  { name: "Blog Compass", url: "projects" },
+  { name: "Porto Seguro", url: "projects" },
+  { name: "Blog Compass.uol", url: "projects" },
   { name: "allProjects", url: "projects" },
 ];
 

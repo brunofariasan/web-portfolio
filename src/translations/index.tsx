@@ -28,7 +28,7 @@ const resources = {
       overThePast:
         "Over the past years, as a front-end developer, I have worked with major partners of Compass.uol" +
         "to help them realize their full potential and attract new clients.",
-      topProjects: "Top projects —",
+      topProjects: "Latest projects —",
       myName:
         " Hi there! I'm Bruno Faria, and I graduated in Information Systems. Currently, I work as a Front-End developer " +
         "at Compass.uol. Driven by a passion for technology, I aim to translate ideas into code that simplifies people's " +
@@ -95,7 +95,7 @@ const resources = {
       overThePast:
         "Nos últimos anos, na qualidade de Desenvolvedor Front-end, tenho trabalhado com grandes parceiros da Compass.uol com o " +
         "objetivo de auxiliá-los a alcançar seu pleno potencial e atrair novos clientes.",
-      topProjects: "Principais projetos —",
+      topProjects: "Últimos projetos —",
       myName:
       "Meu nome é Bruno Faria, possuo graduação em Sistemas de Informação e atualmente ocupo a posição " +
       "de Front-End Dev na Compass.uol. Movido por uma paixão pela tecnologia, busco traduzir " +

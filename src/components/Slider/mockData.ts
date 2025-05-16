@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Mecânica promocional",
     description:
-      "Desenvolvimento de portal administrativo para a criação de cupons destinados aos clientes do clube de pontos.",
+      " Desenvolvimento de Micro Front-End para Geração de Cupons, utilizado pela Controladoria da Livelo",
     src: "livelo-new-logo.svg",
     link: "https://www./",
     color: "#808080",
@@ -22,10 +22,30 @@ export const projects = [
     empresa: "Livelo",
   },
   {
-    title: "Checkout",
+    title: "Precificação de Passagens Aéreas",
     description:
-      "Desenvolvimento de sistema de carrinho de compras, juntamente com uma experiência de checkout eficiente," +
-      " visando proporcionar aos usuários uma jornada de compra intuitiva.",
+      "Desenvolvimento de Portal Administrativo para Precificação de Passagens Aéreas.",
+    src: "livelo-new-logo.svg",
+    link: "https://www./",
+    color: "#808080",
+    icon: [
+      "icon-react",
+      "icon-scrum",
+      "icon-jest",
+      "icon-javascript",
+      "icon-figma",
+      "icon-git",
+      "icon-nodejs",
+      "icon-jira",
+      "icon-styled-components",
+      "icon-gitlab",
+    ],
+    empresa: "Livelo",
+  },
+  {
+    title: "Checkout Porto",
+    description:
+      "Participação desde o início no desenvolvimento do sistema de carrinho e checkout, garantindo a implementação das regras de negócio definidas para a equipe.",
     src: "Logos_Porto.svg",
     link: "https://www./",
     color: "#808080",
@@ -45,9 +65,9 @@ export const projects = [
     empresa: "Porto",
   },
   {
-    title: "Site institucional",
+    title: "Site institucional Edge.uol",
     description:
-      "Criação de um novo site institucional Edge, destacando-se pela inovação e modernidade em design.",
+      "Colaboração no desenvolvimento do site institucional Edge.UOL desde o zero, incluindo a criação de novas seções e a implementação de um formulário de contato.",
     src: "edge.svg",
     link: "https://www./",
     color: "#808080",
