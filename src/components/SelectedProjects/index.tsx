@@ -45,7 +45,9 @@ export default function SelectedProjects() {
                 >
                   <Text variant="card-description">{item.description}</Text>
                   <Flex flexDirection="column" gap="1rem">
-                    <Text variant="title-logo">Parceiro</Text>
+                    {item.partner &&
+                      <Text variant="title-logo">Parceiro</Text>
+                    }
                     <Image
                       src={item.logo.src}
                       alt="Logo Livelo"
